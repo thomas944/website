@@ -1,135 +1,47 @@
-// "use client";
+"use client";
 
 import React from 'react'
+import { Responsive, WidthProvider } from 'react-grid-layout';
+import 'react-grid-layout/css/styles.css';
+import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
-import NameBlock from '../components/blocks/NameBlock';
+import { lg, md, sm, xs } from '../../utils/layouts'
 
-const CustomGridLayout: React.FC = () => {
-  return (
-    <div style={{ minHeight: '100vh', backgroundColor: colors.black, padding: '2rem', boxSizing: 'border-box'}}>
-        <div style={{height: '100%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
-            <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(4, 1fr)', height: '65vh', width: '1500px', gap: '1rem' }}>
-                <div style={{ 
-                    }}>
-                    <NameBlock />
-                </div>
-                <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 2'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
+const ResponsiveGridLayout = WidthProvider(Responsive);
 
-                <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 2'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
+export const Home = () => {
+    return (
+        <div>
+            <div></div>
+            <div style={{maxWidth: '1500px', width: '100%', backgroundColor: colors.lightGray}}>
+                <ResponsiveGridLayout
+                    layouts={{lg: lg, md: md, sm: sm, xs: xs}}
+                    breakpoints={{lg: 1490, md: 1000, sm: 500, xs: 0}}
+                    cols={{lg: 3, md: 2, sm: 1, xs: 1}}
+                    rowHeight={100}
+                    isDraggable={false}    
+                    isResizable={false}
+                    useCSSTransforms
+                    className="layout"
 
-                <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 1'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
+                    style={{backgroundColor: colors.lightBlue}}
+                >
+                    <div key="Name" style={{backgroundColor: colors.lightOrange}}>Name</div>
+                    <div key="TechStack" style={{backgroundColor: colors.lightOrange}}>Tech Stack</div>
+                    <div key="About" style={{backgroundColor: colors.lightOrange}}>About</div>
+                    <div key="Picture" style={{backgroundColor: colors.lightOrange}}>Picture</div>
 
-                <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 1'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
-
-                
-                <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 2'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
-
-                <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 1'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
+                    <div key="Blog" style={{backgroundColor: colors.lightOrange}}>Blog</div>
+                    <div key="Email" style={{backgroundColor: colors.lightOrange}}>Email</div>
+                    <div key="Projects" style={{backgroundColor: colors.lightOrange}}>Projects</div>
+                    <div key="Spotify" style={{backgroundColor: colors.lightOrange}}>Spotify</div>
+                    <div key="SocialMedia" style={{backgroundColor: colors.lightOrange}}>SocialMedia</div>
 
 
-                 <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 1'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
-
-
-                 <div style={{ 
-                    backgroundColor: 'white', 
-                    borderRadius: '0.75rem', 
-                    padding: '1.5rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    gridColumn: 'span 1',
-                    gridRow: 'span 1'
-                    }}>
-                    <span style={{ color: '#1f2937', fontSize: '1.125rem', fontWeight: '500' }}>Large Item</span>
-                </div>
-
-
-
-
-
-
+                </ResponsiveGridLayout>
             </div>
         </div>
-       
-     
-    </div>
-  );
-};
-export default CustomGridLayout
+    )
+}
+
+export default Home

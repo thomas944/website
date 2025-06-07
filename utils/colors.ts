@@ -18,7 +18,7 @@ export const colors = {
     // neoGreen: '#1DB954',
 
     // baseGreen: '#62DBBE'
-    
+    lightOrange: '#FFC9B4',
     black: '#000000',
     white: '#FFFFFF',
    
