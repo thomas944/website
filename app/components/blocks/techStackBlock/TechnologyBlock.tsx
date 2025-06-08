@@ -13,9 +13,9 @@ const TechnologyBlock = () => {
                 <TechnologyIcon path={IconData.TSIcon}/>
                 <TechnologyIcon path={IconData.JSIcon}/>
                 <TechnologyIcon path={IconData.ReactIcon}/>
+                <TechnologyIcon path={IconData.CssIcon}/>
                 <TechnologyIcon path={IconData.NextJSIcon}/>
                 <TechnologyIcon path={IconData.GitIcon}/>
-                <TechnologyIcon path={IconData.GithubIcon}/>
                 <TechnologyIcon path={IconData.DockerIcon}/>
                 <TechnologyIcon path={IconData.PythonIcon}/>
             </div>

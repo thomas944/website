@@ -12,6 +12,9 @@ import BlogBlock from '../components/blocks/BlogBlock';
 import EmailBlock from '../components/blocks/EmailBlock';
 // import TechnologiesBlock from '../components/blocks/TechStackBlock';
 import TechnologyBlock from '../components/blocks/techStackBlock/TechnologyBlock';
+import ProjectsBlock from '../components/blocks/ProjectsBlock';
+import AboutBlock from '../components/blocks/AboutBlock';
+import SocialMediaBlock from '../components/blocks/socialMediaBlock/SocialMediaBlock';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -40,7 +43,9 @@ export const Home = () => {
                     <div key="TechStack">
                         <TechnologyBlock />
                     </div>
-                    <div key="About" style={{ backgroundColor: colors.lightOrange }}>About</div>
+                    <div key="About">
+                        <AboutBlock />
+                    </div>
                     <div key="Picture" style={{ backgroundColor: colors.lightOrange }}>Picture</div>
 
                     <div key="Blog">
@@ -49,9 +54,13 @@ export const Home = () => {
                     <div key="Email">
                         <EmailBlock />
                     </div>
-                    <div key="Projects" style={{ backgroundColor: colors.lightOrange }}>Projects</div>
+                    <div key="Projects">
+                        <ProjectsBlock />
+                    </div>
                     <div key="Spotify" style={{ backgroundColor: colors.lightOrange }}>Spotify</div>
-                    <div key="SocialMedia" style={{ backgroundColor: colors.lightOrange }}>SocialMedia</div>
+                    <div key="SocialMedia">
+                        <SocialMediaBlock />
+                    </div>
 
 
                 </ResponsiveGridLayout>
