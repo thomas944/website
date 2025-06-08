@@ -54,7 +54,7 @@ const NameBlock = () => {
         backgroundColor: colors.darkBlue, 
         width: '100%', 
         height: '100%', 
-        borderRadius: '0.75rem', 
+        borderRadius: '1rem', 
         display: 'flex', 
         flexDirection: 'row', 
         justifyContent: 'center', 
@@ -89,7 +89,7 @@ const NameBlock = () => {
         ...layerStyle,
         backgroundColor: states[currentIndex].bg,
         color: states[currentIndex].text,
-        borderRadius: '0.75rem', 
+        borderRadius: '1rem', 
         zIndex: 1
     };
 
@@ -97,7 +97,7 @@ const NameBlock = () => {
         ...layerStyle,
         backgroundColor: states[nextIndex].bg,
         color: states[nextIndex].text,
-        borderRadius: '0.75rem', 
+        borderRadius: '1rem', 
         transform: isSliding ? 'translateX(0)' : 'translateX(100%)',
         transition: isSliding ? 'transform 1.2s ease-out' : 'none',
         zIndex: 2,
@@ -125,4 +125,4 @@ const NameBlock = () => {
     )
 }
 
-export default NameBlock
+export default NameBlock;
