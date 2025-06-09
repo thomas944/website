@@ -9,7 +9,7 @@ import { lg, md, sm, xs } from '../../utils/layouts'
 import LgNav from '../../components/nav/LgNav';
 import NameBlock from '../../components/nameBlock/NameBlock';
 import BlogBlock from '../../components/BlogBlock';
-import EmailBlock from '../../components/EmailBlock';
+import EmailBlock from '../../components/emailBlock/EmailBlock';
 import TechnologyBlock from '../../components/techStackBlock/TechnologyBlock';
 import ProjectsBlock from '../../components/projectsBlock/ProjectsBlock';
 import AboutBlock from '../../components/AboutBlock';

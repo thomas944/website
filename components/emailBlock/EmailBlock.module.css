@@ -2,50 +2,43 @@
     height: 100%;
     width: 100%;
     background-color: #242424;
-    color: white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
 .titleContainer {
-    height: 75%;
-    width: 100%
+    height: 100%;
+    width: 100%;
 }
 
 .titleText {
+    color: white;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 5rem;
-    line-height: 1.2;
+    font-size: 3.5rem;
 }
-
-@media screen and (max-width: 425px) {
-    .titleText {
-        font-size: 4rem
-    }
-}
-
 
 .buttonContainer {
-    height: 25%;
+    height: 50%;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: end;
-    font-size: 2rem;
-    font-weight: 400;
-    gap: 1rem;
 }
 
-.buttonText{
+.buttonText {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     cursor: pointer;
+
 }
 
 .buttonText:hover {
