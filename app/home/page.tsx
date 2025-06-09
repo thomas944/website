@@ -7,11 +7,11 @@ import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
 import { lg, md, sm, xs } from '../../utils/layouts'
 import LgNav from '../../components/nav/LgNav';
-import NameBlock from '../../components/NameBlock';
+import NameBlock from '../../components/nameBlock/NameBlock';
 import BlogBlock from '../../components/BlogBlock';
 import EmailBlock from '../../components/EmailBlock';
 import TechnologyBlock from '../../components/techStackBlock/TechnologyBlock';
-import ProjectsBlock from '../../components/ProjectsBlock';
+import ProjectsBlock from '../../components/projectsBlock/ProjectsBlock';
 import AboutBlock from '../../components/AboutBlock';
 import SocialMediaBlock from '../../components/socialMediaBlock/SocialMediaBlock';
 import CardStackBlock from '../../components/CardStackBlock';

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { colors } from '@/utils/colors';
+import styles from './NameBlock.module.css'
 
 interface AnimationState {
     bg: string;
@@ -50,22 +51,22 @@ const NameBlock = () => {
         return () => clearTimeout(timeoutId);
     }, [nextIndex]);
 
-    const containerStyle: React.CSSProperties = {
-        backgroundColor: colors.darkBlue, 
-        width: '100%', 
-        height: '100%', 
-        borderRadius: '1rem', 
-        display: 'flex', 
-        flexDirection: 'row', 
-        justifyContent: 'center', 
-        alignItems: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-        // Improve rendering for animation
-        willChange: 'contents',
-        isolation: 'isolate', // Creates new stacking context to prevent corner bleeding
-        gridColumn: 'span 1' ,
-    };
+    // const containerStyle: React.CSSProperties = {
+    //     backgroundColor: colors.darkBlue, 
+    //     width: '100%', 
+    //     height: '100%', 
+    //     borderRadius: '1rem', 
+    //     display: 'flex', 
+    //     flexDirection: 'row', 
+    //     justifyContent: 'center', 
+    //     alignItems: 'center',
+    //     position: 'relative',
+    //     overflow: 'hidden',
+    //     // Improve rendering for animation
+    //     willChange: 'contents',
+    //     isolation: 'isolate', // Creates new stacking context to prevent corner bleeding
+    //     gridColumn: 'span 1' ,
+    // };
 
     const layerStyle: React.CSSProperties = {
         position: 'absolute',
@@ -107,17 +108,17 @@ const NameBlock = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        <div className={styles.container}>
             {/* Base layer - current state */}
             <div style={currentLayerStyle}>
-                <span style={{...textStyle, color: states[currentIndex].text}}>
+                <span className={styles.text} style={{color: states[currentIndex].text}}>
                     Thomas
                 </span>
             </div>
             
             {/* Sliding layer - next state */}
             <div style={slidingLayerStyle}>
-                <span style={{...textStyle, color: states[nextIndex].text}}>
+                <span className={styles.text} style={{color: states[nextIndex].text}}>
                     Thomas
                 </span>
             </div>
