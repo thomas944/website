@@ -15,6 +15,8 @@ import TechnologyBlock from '../components/blocks/techStackBlock/TechnologyBlock
 import ProjectsBlock from '../components/blocks/ProjectsBlock';
 import AboutBlock from '../components/blocks/AboutBlock';
 import SocialMediaBlock from '../components/blocks/socialMediaBlock/SocialMediaBlock';
+import CardStackBlock from '../components/blocks/CardStackBlock';
+import SpotifyBlock from '../components/blocks/SpotifyBlock';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -46,7 +48,9 @@ export const Home = () => {
                     <div key="About">
                         <AboutBlock />
                     </div>
-                    <div key="Picture" style={{ backgroundColor: colors.lightOrange }}>Picture</div>
+                    <div key="Picture">
+                        <CardStackBlock />
+                    </div>
 
                     <div key="Blog">
                         <BlogBlock />
@@ -57,7 +61,9 @@ export const Home = () => {
                     <div key="Projects">
                         <ProjectsBlock />
                     </div>
-                    <div key="Spotify" style={{ backgroundColor: colors.lightOrange }}>Spotify</div>
+                    <div key="Spotify">
+                        <SpotifyBlock />
+                    </div>
                     <div key="SocialMedia">
                         <SocialMediaBlock />
                     </div>
