@@ -6,22 +6,22 @@ import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
 import { lg, md, sm, xs } from '../../utils/layouts'
-import LgNav from '../components/nav/LgNav';
-import NameBlock from '../components/blocks/NameBlock';
-import BlogBlock from '../components/blocks/BlogBlock';
-import EmailBlock from '../components/blocks/EmailBlock';
-import TechnologyBlock from '../components/blocks/techStackBlock/TechnologyBlock';
-import ProjectsBlock from '../components/blocks/ProjectsBlock';
-import AboutBlock from '../components/blocks/AboutBlock';
-import SocialMediaBlock from '../components/blocks/socialMediaBlock/SocialMediaBlock';
-import CardStackBlock from '../components/blocks/CardStackBlock';
-import SpotifyBlock from '../components/blocks/SpotifyBlock';
+import LgNav from '../../components/nav/LgNav';
+import NameBlock from '../../components/NameBlock';
+import BlogBlock from '../../components/BlogBlock';
+import EmailBlock from '../../components/EmailBlock';
+import TechnologyBlock from '../../components/techStackBlock/TechnologyBlock';
+import ProjectsBlock from '../../components/ProjectsBlock';
+import AboutBlock from '../../components/AboutBlock';
+import SocialMediaBlock from '../../components/socialMediaBlock/SocialMediaBlock';
+import CardStackBlock from '../../components/CardStackBlock';
+import SpotifyBlock from '../../components/SpotifyBlock';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 export const Home = () => {
     return (
-        <div style={{ height: '100vh', width: '100vw', backgroundColor: colors.black }}>
+        <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: colors.black }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'Inter, sans-serif' }}>
 
                 <LgNav />

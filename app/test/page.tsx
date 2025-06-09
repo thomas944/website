@@ -3,7 +3,7 @@ import React from 'react'
 import BaseIcon from './BaseIcon'
 import { IconData } from '../Icons'
 import { colors } from '@/utils/colors'
-import CardStackBlock from '../components/blocks/CardStackBlock'
+import CardStackBlock from '../../components/CardStackBlock'
 
 const page = async () => {
 
