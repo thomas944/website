@@ -57,5 +57,10 @@
     .smallContainerView {
         display: flex;
         flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .titleText {
+        font-size: 4.5rem
     }
 }

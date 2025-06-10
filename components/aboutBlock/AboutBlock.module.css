@@ -22,7 +22,7 @@
 }
 
 .contentContainer {
-    height: 40%;
+    height: 60%;
     width: 100%;
 }
 
@@ -31,4 +31,12 @@
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 532px) {
+    .contentContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }

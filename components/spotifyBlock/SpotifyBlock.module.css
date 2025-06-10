@@ -36,6 +36,7 @@
     color: white;
     font-size: 2.5rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .songContainer {
@@ -75,6 +76,7 @@
     font-size: 4.5rem;
     line-height: 1.2;
     font-weight: 500;
+    cursor: pointer
 }
 
 .songTextSmall {
@@ -85,6 +87,16 @@
     line-height: 1.2;
     font-weight: 400;
 }
+
+.statusTextLarge:hover {
+    text-decoration: underline;
+}
+
+.statusTextSmall:hover {
+    text-decoration: underline;
+
+}
+
 
 @media screen and (max-width: 532px) {
     .largeContainerView {

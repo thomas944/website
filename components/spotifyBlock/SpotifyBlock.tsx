@@ -2,28 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { colors } from '@/utils/colors'
 import styles from './SpotifyBlock.module.css'
 
-interface ImageData {
-    height: number;
-    url: string;
-    width: number;
-}
 
 interface TrackData {
     name: string;
     artists: string[];
-    images: {
-        large: string;
-        medium: string;
-        small: string;
-        all: ImageData[]
-    }
+    image: string;
+    url: string;
 }
+
 interface SongData {
     success: boolean;
+    details?: string;
     online: boolean;
     track: TrackData;
-    progress: number;
-    duration: number;
 }
 
 const SpotifyBlock = () => {
@@ -31,7 +22,12 @@ const SpotifyBlock = () => {
     const [song, setSong] = useState('')
     const [artists, setArtists] = useState('')
     const [img, setImg] = useState('')
+    const [url, setUrl] = useState('')
 
+    const defaultName = 'love.';
+    const defaultArtist = 'wave to earth';
+    const defaultImg = 'https://i.scdn.co/image/ab67616d0000485124f8c3ad20b7c6cfecb5832e';
+    const defaultUrl = 'https://open.spotify.com/track/5mtTAScDytxMMqZj14NmlN';
 
     useEffect(() => {
         const fetchSong = async () => {
@@ -41,7 +37,8 @@ const SpotifyBlock = () => {
                 setOnline(songData.online)
                 setSong(songData.track.name)
                 setArtists(songData.track.artists.join(', '))
-                setImg(songData.track.images.small)
+                setImg(songData.track.image)
+                setUrl(songData.track.url)
             } catch (error) {
                 console.error('Failed to fetch song:', error)
             }
@@ -58,20 +55,23 @@ const SpotifyBlock = () => {
         <div className={styles.container}>
             <div className={styles.largeContainerView}>
                 <div className={styles.imgContainer}>
-                    <img src={img} className={styles.img} />
+                    <img src={img || defaultImg} className={styles.img} />
                 </div>
                 <div className={styles.contentContainer}>
-                    <span className={styles.statusTextLarge}>{online ? 'Now Listening' : 'Offline'}</span>
+                    <span className={styles.statusTextLarge}
+                          onClick={() => window.open(url || defaultUrl, '_blank')}>
+                        {online ? 'Now Listening' : 'Offline'}</span>
                     <div className={styles.songContainer}>
-                        <span className={styles.songName}>{song}</span>
-                        <span className={styles.songArtists}>{artists}</span>
+                        <span className={styles.songName}>{song || defaultName}</span>
+                        <span className={styles.songArtists}>{artists || defaultArtist}</span>
                     </div>
 
                 </div>
             </div>
 
             <div className={styles.smallContainerView}>
-                <div className={styles.statusTextSmall}>
+                <div className={styles.statusTextSmall} 
+                    onClick={() => window.open(url || defaultUrl, '_blank')}>
                     {online ? (
                         <>
                             <span>Now</span>
@@ -84,8 +84,8 @@ const SpotifyBlock = () => {
                  
                 </div>
                 <div className={styles.songTextSmall}>
-                    <span>{song}</span>
-                    <span>{artists}</span>
+                    <span>{song || defaultName}</span>
+                    <span>{artists || defaultArtist}</span>
                 </div>
             </div>
         </div>

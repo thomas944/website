@@ -40,3 +40,10 @@
 .contentText:hover {
     text-decoration: underline;
 }
+
+
+@media screen and (max-width: 532px) {
+    .titleText {
+        font-size: 4.5rem;
+    }
+}
