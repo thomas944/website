@@ -1,0 +1,98 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #38435A;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
+}
+
+.largeContainerView {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.img {
+    border-radius: 0.5rem;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+}
+
+.statusTextLarge {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.songContainer {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 1rem; */
+}
+
+.songName {
+    color: #95B7DF;
+    font-size: 1.5rem;
+    font-weight: 400rem;
+    line-height: 1;
+    white-space: nowrap;       
+    overflow: hidden;         
+    text-overflow: ellipsis; 
+}
+
+.songArtists {
+    color: #95B7DF;
+    font-size: 1.5rem;
+    font-weight: 400rem;
+    white-space: nowrap;       
+    overflow: hidden;         
+    text-overflow: ellipsis; 
+}
+
+.smallContainerView {
+    display: none;
+}
+
+
+.statusTextSmall {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.songTextSmall {
+    display: flex;
+    flex-direction: column;
+    color: #95B7DF;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 532px) {
+    .largeContainerView {
+        display: none;
+    }
+
+    .smallContainerView {
+        display: block
+    }
+}
+

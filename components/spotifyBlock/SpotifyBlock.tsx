@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { colors } from '@/utils/colors'
+import styles from './SpotifyBlock.module.css'
 
 interface ImageData {
     height: number;
@@ -54,17 +55,38 @@ const SpotifyBlock = () => {
 
 
     return (
-        <div style={{ height: '100%', width: '100%', backgroundColor: colors.darkBlue, borderRadius: '1rem', padding: '1rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'row' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '25%' }}>
-                <img src={img} style={{ borderRadius: '1rem' }} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', width: '75%', height: '100%' }} >
-                <span style={{ color: colors.white, fontSize: '2rem', fontWeight: 600 }}>{online ? 'Now Listening' : 'Offline'}</span>
-                <div style={{ display: 'flex', flexDirection: 'column', marginTop: '1rem' }}>
-                    <span style={{ color: colors.lightBlue, fontSize: '1.5rem', fontWeight: 500, lineHeight: 1 }}>{song}</span>
-                    <span style={{ color: colors.lightBlue, fontSize: '1.5rem', fontWeight: 500 }}>{artists}</span>
+        <div className={styles.container}>
+            <div className={styles.largeContainerView}>
+                <div className={styles.imgContainer}>
+                    <img src={img} className={styles.img} />
                 </div>
+                <div className={styles.contentContainer}>
+                    <span className={styles.statusTextLarge}>{online ? 'Now Listening' : 'Offline'}</span>
+                    <div className={styles.songContainer}>
+                        <span className={styles.songName}>{song}</span>
+                        <span className={styles.songArtists}>{artists}</span>
+                    </div>
 
+                </div>
+            </div>
+
+            <div className={styles.smallContainerView}>
+                <div className={styles.statusTextSmall}>
+                    {online ? (
+                        <>
+                            <span>Now</span>
+                            <span>Listening</span> 
+                        </>
+                  
+                    ) : (
+                        <span>Offline</span>
+                    )}
+                 
+                </div>
+                <div className={styles.songTextSmall}>
+                    <span>{song}</span>
+                    <span>{artists}</span>
+                </div>
             </div>
         </div>
     )

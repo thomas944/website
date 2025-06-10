@@ -7,9 +7,17 @@ const EmailBlock = () => {
     return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
-                <span className={styles.titleText}>
-                    Get in Touch
-                </span>
+                <div className={styles.largeContainerView}>
+                    <span className={styles.titleText}>
+                        Get in Touch
+                    </span>
+                </div>
+                <div className={styles.smallContainerView}>
+                    <span className={styles.titleText}>Get in</span>
+                    <span className={styles.titleText}>Touch</span>
+                </div>
+                
+
             </div>
             <div className={styles.buttonContainer}>
                 <div className={styles.buttonText}>

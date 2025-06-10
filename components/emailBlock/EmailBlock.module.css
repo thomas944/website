@@ -44,3 +44,18 @@
 .buttonText:hover {
     text-decoration: underline;
 }
+
+.smallContainerView {
+    display: none;
+}
+
+@media screen and (max-width: 532px) {
+    .largeContainerView {
+        display: none;
+    }
+
+    .smallContainerView {
+        display: flex;
+        flex-direction: column;
+    }
+}
