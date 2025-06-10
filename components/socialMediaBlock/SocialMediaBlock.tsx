@@ -4,6 +4,10 @@ import SocialMediaIcon from './SocialMediaIcon'
 import { IconData } from '@/app/Icons'
 import styles from './SocialMediaBlock.module.css'
 
+const linkedInUrl = "https://www.linkedin.com/in/pham944/"
+const githubUrl = "https://github.com/thomas944"
+const xUrl = "https://x.com/thomaspham944"
+
 const SocialMediaBlock = () => {
     return (
         <div className={styles.container}>
@@ -17,9 +21,9 @@ const SocialMediaBlock = () => {
 
             </div>
             <div className={styles.iconContainer}>
-                <SocialMediaIcon path={IconData.LinkedInIcon} />
-                <SocialMediaIcon path={IconData.GithubIcon} />
-                <SocialMediaIcon path={IconData.XIcon} />
+                <SocialMediaIcon path={IconData.LinkedInIcon} url={linkedInUrl} />
+                <SocialMediaIcon path={IconData.GithubIcon} url={githubUrl}/>
+                <SocialMediaIcon path={IconData.XIcon} url={xUrl}/>
             </div>
         </div>
     )

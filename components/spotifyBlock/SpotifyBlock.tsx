@@ -45,7 +45,7 @@ const SpotifyBlock = () => {
         };
 
         fetchSong()
-        const interval = setInterval(fetchSong, 10 * 1000)
+        const interval = setInterval(fetchSong, 300 * 1000)
 
         return () => clearInterval(interval);
     }, []);

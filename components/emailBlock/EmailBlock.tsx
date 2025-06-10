@@ -3,6 +3,8 @@ import { colors } from '@/utils/colors';
 import { MdOutlineArrowOutward } from "react-icons/md";
 import styles from './EmailBlock.module.css'
 
+const email = "phamdwtn@gmail.com"
+
 const EmailBlock = () => {    
     return (
         <div className={styles.container}>
@@ -20,11 +22,11 @@ const EmailBlock = () => {
 
             </div>
             <div className={styles.buttonContainer}>
-                <div className={styles.buttonText}>
+                <a href={`mailto:${email}`}  className={styles.buttonText}>
                     <MdOutlineArrowOutward />
                     <span>Email</span>
 
-                </div>
+                </a>
             </div>
         </div>
     )
