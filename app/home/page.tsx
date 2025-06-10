@@ -6,16 +6,16 @@ import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
 import { lg, md, sm, xs } from '../../utils/layouts'
-import LgNav from '../../components/nav/LgNav';
-import NameBlock from '../../components/nameBlock/NameBlock';
-import BlogBlock from '../../components/blogBlock/BlogBlock';
-import EmailBlock from '../../components/emailBlock/EmailBlock';
-import TechnologyBlock from '../../components/techStackBlock/TechnologyBlock';
-import ProjectsBlock from '../../components/projectsBlock/ProjectsBlock';
-import AboutBlock from '../../components/aboutBlock/AboutBlock';
-import SocialMediaBlock from '../../components/socialMediaBlock/SocialMediaBlock';
-import CardStackBlock from '../../components/cardStackBlock/CardStackBlock';
-import SpotifyBlock from '../../components/spotifyBlock/SpotifyBlock';
+import LgNav from '@/components/homePage/nav/LgNav';
+import NameBlock from '@/components/homePage/nameBlock/NameBlock';
+import BlogBlock from '@/components/homePage/blogBlock/BlogBlock';
+import EmailBlock from '@/components/homePage/emailBlock/EmailBlock';
+import TechnologyBlock from '@/components/homePage/techStackBlock/TechnologyBlock';
+import ProjectsBlock from '@/components/homePage/projectsBlock/ProjectsBlock';
+import AboutBlock from '@/components/homePage/aboutBlock/AboutBlock';
+import SocialMediaBlock from '@/components/homePage/socialMediaBlock/SocialMediaBlock';
+import CardStackBlock from '@/components/homePage/cardStackBlock/CardStackBlock';
+import SpotifyBlock from '@/components/homePage/spotifyBlock/SpotifyBlock';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -23,10 +23,9 @@ export const Home = () => {
     return (
         <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: colors.black }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'Inter, sans-serif' }}>
-
                 <LgNav />
-                <div style={{width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <div style={{ maxWidth: '1500px', width: '100%'}}>
+                <div style={{ width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <div style={{ maxWidth: '1500px', width: '100%' }}>
                         <ResponsiveGridLayout
                             layouts={{ lg: lg, md: md, sm: sm, xs: xs }}
                             breakpoints={{ lg: 1450, md: 1000, sm: 500, xs: 0 }}
@@ -36,7 +35,6 @@ export const Home = () => {
                             isResizable={false}
                             useCSSTransforms
                             className="layout"
-
                             style={{}}
                         >
                             <div key="Name">
@@ -67,16 +65,11 @@ export const Home = () => {
                             <div key="SocialMedia">
                                 <SocialMediaBlock />
                             </div>
-
-
                         </ResponsiveGridLayout>
                     </div>
                 </div>
-
-
             </div>
         </div>
-
     )
 }
 

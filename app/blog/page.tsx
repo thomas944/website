@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import LgNav from '@/components/nav/LgNav'
+import LgNav from '@/components/homePage/nav/LgNav'
 import { colors } from '@/utils/colors'
 
 const page = () => {
