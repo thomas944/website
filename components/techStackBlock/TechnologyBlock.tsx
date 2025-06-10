@@ -7,8 +7,12 @@ import styles from './TechnologyBlock.module.css'
 const TechnologyBlock = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.titleContainer}>
+            <div className={styles.titleContainerLarge}>
                 <span className={styles.titleText}>Technologies</span>
+            </div>
+            <div className={styles.titleContainerSmall}>
+                <span className={styles.titleText}>Tech</span>
+                <span className={styles.titleText}>Stack</span>
             </div>
             <div className={styles.iconContainer}>
                 <TechnologyIcon path={IconData.TSIcon}/>

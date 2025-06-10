@@ -10,18 +10,20 @@
 }
 
 .titleContainerLarge {
+    display: block;
     height: 50%;
     width: 100%;
 }
 
 .titleContainerSmall {
-    display: none
+    display: none;
 }
 
 .titleText {
     font-weight: 500;
     font-size: 3.5rem;
     color: white;
+    
 }
 
 .iconContainer {
@@ -35,30 +37,17 @@
 @media screen and (max-width: 425px) {
     .titleContainerLarge {
         display: none;
-        /* display: flex;
-        flex-direction: row;
-        justify-content: center; */
     }
+
     .titleContainerSmall {
         height: 50%;
         width: 100%;
         display: flex;
         flex-direction: column;
-        line-height: 1.2;
-        padding-left: 1.25rem
-
+        /* align-items: center; */
     }
-    /* .titleText {
-        font-size: 2.75rem
-    } */
 
     .iconContainer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-        align-items: center;
-    }
-    .container {
-        padding: 0.75rem 0
+        /* justify-content: center; */
     }
 }
