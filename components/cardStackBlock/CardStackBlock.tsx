@@ -1,10 +1,10 @@
 "use client"
 
-
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { colors } from "@/utils/colors";
+import styles from './CardStackBlock.module.css'
 
 const CARD_OFFSET = 4;
 const ROTATION_FACTOR = 6;
@@ -49,7 +49,7 @@ const Block = () => {
   };
 
   return (
-    <ul style={{ height: '100%', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.darkGray, borderRadius: '1rem'}}>
+    <ul className={styles.cardsContainer}>
       {cards.map((card, index) => (
         <motion.li
           key={card.id}
@@ -77,14 +77,7 @@ const Block = () => {
         >
           <Image
             alt="Card image"
-            style={{ 
-              objectFit: 'cover', 
-              width: '80%', 
-              marginLeft: 'auto', 
-              marginRight: 'auto', 
-              borderRadius: '1rem', 
-              aspectRatio: '16/9' 
-            }}
+            className={styles.card}
             height={200}
             quality={80}
             src={card.imagePath} // Changed from imageUrl

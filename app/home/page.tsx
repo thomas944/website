@@ -14,7 +14,7 @@ import TechnologyBlock from '../../components/techStackBlock/TechnologyBlock';
 import ProjectsBlock from '../../components/projectsBlock/ProjectsBlock';
 import AboutBlock from '../../components/aboutBlock/AboutBlock';
 import SocialMediaBlock from '../../components/socialMediaBlock/SocialMediaBlock';
-import CardStackBlock from '../../components/CardStackBlock';
+import CardStackBlock from '../../components/cardStackBlock/CardStackBlock';
 import SpotifyBlock from '../../components/SpotifyBlock';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);

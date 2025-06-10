@@ -1,0 +1,47 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #242424;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+    box-sizing: border-box;
+}
+
+.titleContainer {
+    height: 50%;
+    width: 100%;
+}
+
+.titleText {
+    font-weight: 500;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.iconContainer {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+    .titleContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .titleText {
+        font-size: 2.75rem
+    }
+
+    .iconContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}
