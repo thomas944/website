@@ -1,0 +1,34 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #242424;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.titleContainer {
+    height: 40%;
+    width: 100%;
+}
+
+.titleText {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+.contentContainer {
+    height: 40%;
+    width: 100%;
+}
+
+.contentText {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}

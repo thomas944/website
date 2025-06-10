@@ -3,9 +3,7 @@ import { colors } from '@/utils/colors';
 import { MdOutlineArrowOutward } from "react-icons/md";
 import styles from './EmailBlock.module.css'
 
-const EmailBlock = () => {
-    const [hovered, setHovered] = useState(false);
-    
+const EmailBlock = () => {    
     return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
