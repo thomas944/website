@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { colors } from '@/utils/colors';
 import styles from './BlogBlock.module.css'
+import Link from 'next/link'
 
 const BlogBlock = () => {
 
@@ -12,10 +13,13 @@ const BlogBlock = () => {
                 </span>
             </div>
             <div className={styles.contentContainer}>
-                <span className={styles.contentText}>
-                    Read about read about read
-                </span>
+                <Link href={'/blog'}>
+                    <span className={styles.contentText}>
+                        Read about read about read
+                    </span>
+                </Link>
             </div>
+
         </div>
 
     )

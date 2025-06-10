@@ -2,6 +2,7 @@ import React from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md"
 import { colors } from '@/utils/colors'
 import styles from './ProjectsBlock.module.css'
+import Link from 'next/link'
 
 const ProjectsBlock = () => {
     return (
@@ -16,10 +17,13 @@ const ProjectsBlock = () => {
                     <MdOutlineArrowOutward />
                     <span>Resume</span>
                 </div>
-                <div className={styles.buttonText}>
-                    <MdOutlineArrowOutward />
-                    <span>View</span>
-                </div>
+                <Link href={'/work'}>
+                    <div className={styles.buttonText}>
+                        <MdOutlineArrowOutward />
+                        <span>View</span>
+                    </div>
+                </Link>
+                
             </div>
         </div>
     )
