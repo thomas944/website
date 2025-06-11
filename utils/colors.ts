@@ -27,4 +27,6 @@ export const colors = {
     lightBlue: '#95B7DF',
     baseWhite: '#EBEBEB',
     lightGray: '#D4D4D4',
+
+    veryLightBlue: '#eff7ff',
 }
