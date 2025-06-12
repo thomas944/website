@@ -1,0 +1,43 @@
+[
+    {
+        year: 2025,
+        projects: [
+            {
+                title: project1,
+                description: description1,
+                actions: {
+                    visit: true,
+                    github: true
+                    demo: false,
+            
+                }
+            },
+            {
+                title: project2,
+                description: description2,
+                actions: {
+                    visit: true,
+                    github: true
+                    demo: false,
+            
+                }
+            }
+        ]
+    },
+    {
+        year: 2024,
+        projects: [
+            {
+                title: project1,
+                description: description1,
+                actions: {
+                    visit: true,
+                    github: true
+                    demo: false,
+            
+                }
+            }
+        ]
+    },
+
+]
