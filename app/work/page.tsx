@@ -22,15 +22,41 @@ const data = [
                     github: true,
                 },
             },
-            //   {
-            //     title: 'project2',
-            //     description: 'description2',
-            //     actions: {
-            //       visit: true,
-            //       github: true,
-            //       demo: false,
-            //     },
-            //   },
+            {
+                title: 'project2',
+                description: 'description2',
+                actions: {
+                    visit: true,
+                    github: true,
+                    demo: false,
+                },
+            },
+        ],
+    },
+    {
+        year: 2024,
+        projects: [
+            {
+                title: 'project1',
+                description: `Created an app for generating typographic art. Users can select font family,
+                    character, and colors. The design process was enjoyable, inspired by rsms
+                    Inter's poster. The art is created by layering font weights from 1000 to 100
+                    using CSS.`,
+                actions: {
+                    visit: true,
+                    demo: true,
+                    github: true,
+                },
+            },
+            {
+                title: 'project2',
+                description: 'description2',
+                actions: {
+                    visit: true,
+                    github: true,
+                    demo: false,
+                },
+            },
         ],
     },
 ];
@@ -44,8 +70,11 @@ const page = () => {
 
                 <LgNav />
 
-                <div style={{ width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <ContentBlock year={data[0].year} projects={data[0].projects} />
+                <div style={{ width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.5rem' }}>
+                    {data.map((entry, index) => (
+                        <ContentBlock key={index} year={entry.year} projects={entry.projects} />
+                    ))}
+
                 </div>
             </div>
         </div>
