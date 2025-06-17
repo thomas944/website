@@ -6,7 +6,7 @@ export const projectData: ProjectYearGroup[] = [
         projects: [
             {
                 title: 'project1',
-                description: `Created an app for generating typographic art...`,
+                description: `Created an app for generating typographic art... Created an app for generating typographic ar Created an app for generating typographic ar Created an app for generating typographic ar`,
                 actions: {
                     visit: 'https://www.google.com/',
                     demo: 'https://www.youtube.com/',

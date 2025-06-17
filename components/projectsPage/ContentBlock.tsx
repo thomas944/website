@@ -32,7 +32,7 @@ const ContentBlock = ({ year, projects }: ContentBlockProps) => {
                                     <a href={project.actions.github} target="_blank" rel="noopener noreferrer">
                                         <button className={styles.button}>
                                             <MdOutlineArrowOutward className={styles.arrow} />
-                                            <span>GitHub</span>
+                                            <span>Github</span>
                                         </button>
                                     </a>
                                 )}
