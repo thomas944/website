@@ -1,7 +1,10 @@
 export interface Actions {
-    visit: boolean;
-    github: boolean;
-    demo: boolean;
+    // visit: boolean;
+    // github: boolean;
+    // demo: boolean;
+    visit?: string;
+    github?: string;
+    demo?: string;
 }
 
 export interface Project {

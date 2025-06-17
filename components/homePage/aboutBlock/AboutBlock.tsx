@@ -1,14 +1,18 @@
 import React from 'react'
 import { colors } from '@/utils/colors'
 import styles from './AboutBlock.module.css'
+import Link from 'next/link'
 
 const AboutBlock = () => {
     return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
-                <span className={styles.titleText}>
-                    About
-                </span>
+                <Link href={'/about'}>
+                    <span className={styles.titleText}>
+                        About
+                    </span>
+                </Link>
+                
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.contentText}>

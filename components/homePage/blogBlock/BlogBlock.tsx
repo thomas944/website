@@ -9,7 +9,7 @@ const BlogBlock = () => {
         <div className={styles.container}>
             <div className={styles.titleContainer}>
                 <span className={styles.titleText}>
-                    Blog
+                    Notes
                 </span>
             </div>
             <div className={styles.contentContainer}>

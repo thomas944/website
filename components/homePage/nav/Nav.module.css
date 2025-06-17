@@ -22,7 +22,17 @@
     margin: 3.5rem 0 2rem 0;
 }
 
+.lgView {
+    max-width: 1480px;
+}
+
+.mdView {
+    max-width: 980px;
+}
+
 .title {
+  font-family: 'PP Machina', sans-serif;
+  font-weight: 400;
   display: none; 
 }
 

@@ -2,18 +2,7 @@ import React from 'react'
 import { colors } from '@/utils/colors'
 import style from './ContentBlock.module.css'
 import { MdOutlineArrowOutward } from "react-icons/md";
-
-interface Actions {
-    visit: boolean;
-    demo: boolean;
-    github: boolean;
-
-}
-interface Project {
-    title: string;
-    description: string;
-    actions: Actions;
-}
+import { Project } from '@/types/project';
 
 interface ContentBlockProps {
     year: number;
@@ -31,13 +20,29 @@ const ContentBlock = ({ year, projects }: ContentBlockProps) => {
                         <div>
                             <span className={style.descriptionText}>{project.description}</span>
                             <div className={style.buttonContainer}>
-                                {Object.entries(project.actions).map(([actionName, isEnabled]) =>
-                                    isEnabled ? (
-                                        <button key={actionName} className={style.button}>
+                                {project.actions.visit && (
+                                    <a href={project.actions.visit} target="_blank" rel="noopener noreferrer">
+                                        <button className={style.button}>
                                             <MdOutlineArrowOutward className={style.arrow} />
-                                            <span>{actionName.charAt(0).toUpperCase() + actionName.slice(1)}</span>
+                                            <span>Visit</span>
                                         </button>
-                                    ) : null
+                                    </a>
+                                )}
+                                {project.actions.github && (
+                                    <a href={project.actions.github} target="_blank" rel="noopener noreferrer">
+                                        <button className={style.button}>
+                                            <MdOutlineArrowOutward className={style.arrow} />
+                                            <span>GitHub</span>
+                                        </button>
+                                    </a>
+                                )}
+                                {project.actions.demo && (
+                                    <a href={project.actions.demo} target="_blank" rel="noopener noreferrer">
+                                        <button className={style.button}>
+                                            <MdOutlineArrowOutward className={style.arrow} />
+                                            <span>Demo</span>
+                                        </button>
+                                    </a>
                                 )}
                             </div>
                         </div>
@@ -45,7 +50,7 @@ const ContentBlock = ({ year, projects }: ContentBlockProps) => {
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
 export default ContentBlock

@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import LgNav from '@/components/homePage/nav/LgNav'
+import LgNav from '@/components/homePage/nav/Nav'
 import { colors } from '@/utils/colors'
 import '@/styles/fonts.css'
 import ContentBlock from '@/components/projectsPage/ContentBlock'

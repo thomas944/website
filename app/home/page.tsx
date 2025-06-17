@@ -6,7 +6,7 @@ import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
 import { lg, md, sm, xs } from '../../utils/layouts'
-import LgNav from '@/components/homePage/nav/LgNav';
+import LgNav from '@/components/homePage/nav/Nav';
 import NameBlock from '@/components/homePage/nameBlock/NameBlock';
 import BlogBlock from '@/components/homePage/blogBlock/BlogBlock';
 import EmailBlock from '@/components/homePage/emailBlock/EmailBlock';

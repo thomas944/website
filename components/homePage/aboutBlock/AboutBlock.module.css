@@ -19,6 +19,9 @@
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 5rem;
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    cursor: pointer
 }
 
 .contentContainer {
