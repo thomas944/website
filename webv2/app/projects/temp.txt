@@ -1,0 +1,169 @@
+"use client"
+
+import React from 'react'
+import LgNav from '@/components/homePage/nav/LgNav'
+import { colors } from '@/utils/colors'
+import '@/styles/fonts.css'
+import { MdOutlineArrowOutward } from "react-icons/md";
+
+const data = [
+  {
+    year: 2025,
+    projects: [
+      {
+        title: 'project1',
+        description: 'description1',
+        actions: {
+          visit: true,
+          github: true,
+          demo: false,
+        },
+      },
+      {
+        title: 'project2',
+        description: 'description2',
+        actions: {
+          visit: true,
+          github: true,
+          demo: false,
+        },
+      },
+    ],
+  },
+  {
+    year: 2024,
+    projects: [
+      {
+        title: 'project3',
+        description: 'description3',
+        actions: {
+          visit: true,
+          github: true,
+          demo: false,
+        },
+      },
+    ],
+  },
+];
+
+const page = () => {
+
+
+    return (
+        <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: colors.black }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+
+                <LgNav />
+
+                <div style={{ width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <div style={{ backgroundColor: colors.veryLightBlue, maxWidth: '950px', width: '100%', borderRadius: '1rem', display: 'flex', flexDirection: 'column', padding: '6rem 4rem', boxSizing: 'border-box' }}>
+                        <div style={{
+                            width: '100%', display: 'flex',
+                            flexDirection: 'row', justifyContent: 'center',
+                            fontSize: '12.5rem', fontFamily: 'PP Machina Inktrap, sans-serif', fontWeight: 800,
+                            backgroundColor: colors.lightBlue,
+                            backgroundImage: `
+    linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px)
+  `,
+                            backgroundSize: '15px 15px',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            color: 'transparent'
+
+                        }}>
+                            2024
+                        </div>
+                        <div style={{ width: '100%', padding: '0 4rem', fontSize: '2rem' }}>
+                            <div style={{ fontFamily: 'PP Machina Inktrap, sans-serif', fontWeight: 800 }}>
+                                Typeart
+                            </div>
+                            <div>
+                                <span
+                                    style={{
+                                        fontFamily: 'Inter, sans-serif',
+                                        fontSize: '1.5rem',
+                                        fontWeight: 400,
+                                        lineHeight: 1.2,
+                                        display: 'block',
+                                        color: '#4c4c4c'
+                                    }}
+                                >
+                                    Created an app for generating typographic art. Users can select font family,
+                                    character, and colors. The design process was enjoyable, inspired by rsms
+                                    Inter's poster. The art is created by layering font weights from 1000 to 100
+                                    using CSS.
+                                </span>
+                                <div style={{display: 'flex', flexDirection: 'row', gap: '1rem'}}>
+                                    <button
+                                        style={{
+                                            fontFamily: 'Inter, sans-serif',
+                                            border: '1px solid black',
+                                            borderRadius: '20rem',
+                                            fontSize: '1.5rem',
+                                            padding: '.5rem 1.5rem',
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            alignItems: 'center',
+                                            marginTop: '1.5rem',
+                                            color: '#4c4c4c'
+
+                                        }}
+                                        onClick={() => console.log('Button clicked')}
+                                    >
+                                        <MdOutlineArrowOutward style={{ color: '#4c4c4c', height: '32px', width: '32px' }} />
+                                        <span>Visit Now</span>
+                                    </button>
+
+                                    <button
+                                        style={{
+                                            fontFamily: 'Inter, sans-serif',
+                                            border: '1px solid black',
+                                            borderRadius: '20rem',
+                                            fontSize: '1.5rem',
+                                            padding: '.5rem 1.5rem',
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            alignItems: 'center',
+                                            marginTop: '1.5rem',
+                                            color: '#4c4c4c'
+
+                                        }}
+                                        onClick={() => console.log('Button clicked')}
+                                    >
+                                        <MdOutlineArrowOutward style={{ color: '#4c4c4c', height: '32px', width: '32px' }} />
+                                        <span>Demo</span>
+                                    </button>
+
+                                    <button
+                                        style={{
+                                            fontFamily: 'Inter, sans-serif',
+                                            border: '1px solid black',
+                                            borderRadius: '20rem',
+                                            fontSize: '1.5rem',
+                                            padding: '.5rem 1.5rem',
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            alignItems: 'center',
+                                            marginTop: '1.5rem',
+                                            color: '#4c4c4c'
+
+                                        }}
+                                        onClick={() => console.log('Button clicked')}
+                                    >
+                                        <MdOutlineArrowOutward style={{ color: '#4c4c4c', height: '32px', width: '32px' }} />
+                                        <span>Github</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default page
