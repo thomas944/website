@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            // "module": "compare",
+
+
+            "module": "homework.generate_qa",
+            "args": ["generate", "--data_dir", "data", "--output_file", "data/train/balanced_qa_pairs.json", "--split", "valid"],
+            
+
+            // "module": "homework.finetune",
+            // "args": ["test", "vlm_model"],
+            // "module": "grader",
+            // "args": ["homework", "-vv"],
+            
+
+            // "module": "homework.tokenize",
+            // "args": ["checkpoints/2025-03-03_23-15-32_BSQPatchAutoEncoder.pth", "data/tokenized_train.pth", "data/train"],
+            "python": "D:/Users/phamt/School/2025Spring/CS395T/HW/homework_04_v4/.venv/Scripts/python.exe"
+        }
+    ]
+}
