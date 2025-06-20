@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('api.urls')),
     path('spotify/', include('spotify.urls')),
-    # path('mnist/', include('mnist.urls')),
+    path('mnist/', include('mnist.urls')),
 ]

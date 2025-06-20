@@ -39,17 +39,27 @@ def load_models():
     return [mlp, lr, cnn]
 
 def preprocess_image(image: Image.Image):
+    # transform = transforms.Compose([
+    #     transforms.Resize((28, 28)),
+    #     transforms.Grayscale(),
+    #     transforms.ToTensor(),
+    #     transforms.Normalize((0.1307,), (0.3081,))
+    # ])
+
+    # image = image.convert('L')  # force grayscale
+    # image_resized = image.resize((28, 28))
+    # image_resized.save("debug_input.png")  # 🔍 Save before normalization
+
+    # return transform(image).unsqueeze(0)
     transform = transforms.Compose([
         transforms.Resize((28, 28)),
         transforms.Grayscale(),
-        transforms.ToTensor(),
-        transforms.Normalize((0.1307,), (0.3081,))
+        # Add inversion to match MNIST style (black digits on white)
+        transforms.Lambda(lambda x: 1 - x if isinstance(x, torch.Tensor) else 1 - transforms.ToTensor()(x)),
+        transforms.Normalize((0.5,), (0.5,))  # More general normalization
     ])
-
-    image = image.convert('L')  # force grayscale
-    image_resized = image.resize((28, 28))
-    image_resized.save("debug_input.png")  # 🔍 Save before normalization
-
+    
+    image = image.convert('L')
     return transform(image).unsqueeze(0)
 
 def predict_with_models(image: Image.Image, models):

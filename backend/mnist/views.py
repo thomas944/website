@@ -1,31 +1,45 @@
-import torch
-import torch.nn.functional as F
-import torch.nn as nn
-from typing import List
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import JSONParser
-from django.conf import settings
-import os
-import base64
+from rest_framework.response import Response
+from rest_framework import status
 from PIL import Image
+import base64
 import io
-import numpy as np
-from django.conf import settings
+
+from .torchModels.utils import load_models, predict_with_models, preprocess_image
+
+models = load_models()
+
+@api_view(['POST'])
+@parser_classes([JSONParser])
+def predict(request):
+    try:
+        base64_image = request.data.get('image')
+        if not base64_image:
+            return Response({"error": "Image data not provided."}, status=status.HTTP_400_BAD_REQUEST)
+
+        image_data = base64.b64decode(base64_image)
+        image = Image.open(io.BytesIO(image_data)).convert('RGB')
+
+        input_tensor = preprocess_image(image)
+        predictions = predict_with_models(input_tensor, models)
+
+        return Response({
+            "mlp": predictions[0],
+            "lr": predictions[1],
+            "cnn": predictions[2]
+        })
+    
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
 
 
-from torchModels.torchModels import MLPClassifier, LRClassifier, CNNClassifier
-
-def load_models():
-    mlp = MLPClassifier()
-    lr = LRClassifier()
-    cnn = CNNClassifier()
-
-    base_path = os.path.join(settings.BASE_DIR, 'torchModels', 'models')
-    mlp_path = os.path.join(base_path, 'mlp.pth')
-    lr_path = os.path.join(base_path, 'lr.pth')
-    cnn_path = os.path.join(base_path, 'cnn.pth')
-
-# Create your views here.
+@api_view(['GET'])
+def testing(request):
+    return Response({'success': True})
 
 
+@api_view(['GET'])
+def index(request):
+    return Response({'message': 'Server is running...'})
