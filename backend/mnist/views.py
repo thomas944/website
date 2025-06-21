@@ -24,11 +24,7 @@ def predict(request):
         input_tensor = preprocess_image(image)
         predictions = predict_with_models(input_tensor, models)
 
-        return Response({
-            "mlp": predictions[0],
-            "lr": predictions[1],
-            "cnn": predictions[2]
-        })
+        return Response(predictions)
     
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

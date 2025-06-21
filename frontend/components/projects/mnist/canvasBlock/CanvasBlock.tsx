@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { useCanvasDrawing, Prediction } from '../hooks/useCanvasDrawing'
 import { LiaUndoSolid } from "react-icons/lia"
+import { ModelData } from '../MnistPage';
 import styles from './CanvasBlock.module.css'
 
-const CanvasBlock = () => {
+interface CanvasBlockProps {
+    setData: React.Dispatch<React.SetStateAction<ModelData[]>>;
+}
+
+const CanvasBlock = ({ setData }: CanvasBlockProps) => {
     const [showOverlay, setShowOverlay] = useState(true);
     const [predictions, setPredictions] = useState<Prediction[]>([]);
 
@@ -40,6 +45,7 @@ const CanvasBlock = () => {
         });
 
         const data = await res.json();
+        setData(data)
         console.log(data);
     }
 

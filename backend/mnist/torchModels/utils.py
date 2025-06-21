@@ -36,44 +36,50 @@ def load_models():
     lr.eval()
     cnn.eval()
 
-    return [mlp, lr, cnn]
+    return [
+        (cnn, "CNN"),
+        (mlp, "MLP"),
+        (lr, "LR"), 
+    ]
 
 def preprocess_image(image: Image.Image):
-    # transform = transforms.Compose([
-    #     transforms.Resize((28, 28)),
-    #     transforms.Grayscale(),
-    #     transforms.ToTensor(),
-    #     transforms.Normalize((0.1307,), (0.3081,))
-    # ])
-
-    # image = image.convert('L')  # force grayscale
-    # image_resized = image.resize((28, 28))
-    # image_resized.save("debug_input.png")  # 🔍 Save before normalization
-
-    # return transform(image).unsqueeze(0)
     transform = transforms.Compose([
         transforms.Resize((28, 28)),
         transforms.Grayscale(),
-        # Add inversion to match MNIST style (black digits on white)
-        transforms.Lambda(lambda x: 1 - x if isinstance(x, torch.Tensor) else 1 - transforms.ToTensor()(x)),
-        transforms.Normalize((0.5,), (0.5,))  # More general normalization
+        transforms.ToTensor(),
+        transforms.Normalize((0.1307,), (0.3081,))
     ])
-    
-    image = image.convert('L')
+
+    image = image.convert('L') 
+    image_resized = image.resize((28, 28))
+    image_resized.save("debug_input.png") 
+
     return transform(image).unsqueeze(0)
 
 def predict_with_models(image: Image.Image, models):
     results = []
-    for model in models:
+    for model, name in models:
         with torch.no_grad():
             output = model(image)
             probs = F.softmax(output, dim=1).numpy().flatten()  # Convert logits to probabilities
-            top_indices = np.argsort(probs)[-3:][::-1]  # Top 3 in descending order
-            top_predictions = [
-                {"digit": int(i), "confidence": float(round(probs[i] * 100, 2))}
-                for i in top_indices
+
+            all_predictions = [
+                {"digit": i, "confidence": float(probs[i])}
+                for i in range(10)
             ]
-            results.append(top_predictions)
+
+            top_digit = int(np.argmax(probs))
+            top_prediction = {
+                "digit": top_digit, 
+                "confidence": float(probs[top_digit])
+            }
+            
+            model_result = {
+                "name": name,
+                "output": all_predictions,
+                "guess": top_prediction
+            }
+            results.append(model_result)
     return results
 # Create your views here.
 

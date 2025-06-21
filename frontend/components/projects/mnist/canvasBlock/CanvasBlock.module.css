@@ -42,20 +42,30 @@
 }
 
 .undoButton {
-    border: 1px solid black;
-    padding: 10px 16px;
+    width: 80px;
+    background-color: #eaeaea;
+    padding: 4px 10px;
     border-radius: 1rem;
+    font-size: 1.2rem;
+
 }
 
 .clearButton {
-    background-color: #f2cccb;
-    padding: 10px 16px;
+    width: 80px;
+
+    background-color: #FB8B9C;
+    padding: 6px 10px;
     border-radius: 1rem;
+    /* opacity: 60%; */
+    font-size: 1.2rem;
 }
 
 .predictButton {
-    color: white;
-    background-color: #477064;
-    padding: 10px 16px;
+    width: 80px;
+
+    /* color: white; */
+    background-color: #C4DC69;
+    padding: 6px 10px;
     border-radius: 1rem;
+    font-size: 1.2rem;
 }

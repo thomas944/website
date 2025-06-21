@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
 import CanvasBlock from './canvasBlock/CanvasBlock';
+import ConfusionMatrixBlock from './confusionMatrixBlock/ConfusionMatrixBlock';
+import PredictionsBlock from './predictionsBlock/PredictionsBlock';
 
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -11,8 +13,8 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 export const lg = [
     { i: 'Canvas', x: 0, y: 0, w: 1, h: 4},
-    { i: 'ModelPred', x: 1, y: 0, w: 2, h: 4},
-    { i: 'Stats', x: 0, y: 1.5, w: 2, h: 2},
+    { i: 'ModelPred', x: 1, y: 0, w: 2, h: 6.75},
+    { i: 'Stats', x: 0, y: 1.5, w: 1, h: 6},
 
 
 ]
@@ -24,7 +26,21 @@ const md = [
 
 ]
 
+export interface Prediction {
+    digit: number;
+    confidence: number;
+}
+
+export interface ModelData {
+    name: string;
+    output: Prediction[];
+    guess: Prediction;
+}
+
 const MnistPage = () => {
+    const [data, setData] = useState<ModelData[]>([])
+    const [isLoading, setIsLoading] = useState(false)
+
     return (
         <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: ''}}>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'Geist, sans-serif' }}>
@@ -45,10 +61,14 @@ const MnistPage = () => {
                             className="layout"
                         >
                             <div key="Canvas">
-                                <CanvasBlock />
+                                <CanvasBlock setData={setData}/>
                             </div>
-                            <div key="ModelPred" style={{backgroundColor: '#f4f4f4', borderRadius: '1rem'}}>ModelPred</div>
-                            <div key="Stats" style={{backgroundColor: '#f4f4f4', borderRadius: '1rem'}}>Stats</div>
+                            <div key="ModelPred">
+                                <PredictionsBlock data={data} />
+                            </div>
+                            <div key="Stats">
+                                <ConfusionMatrixBlock />
+                            </div>
                         </ResponsiveGridLayout>
 
                     </div>
