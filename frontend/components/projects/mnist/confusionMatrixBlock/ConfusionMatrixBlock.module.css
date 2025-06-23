@@ -83,3 +83,32 @@
     background-color: black;
     color: white;
 }
+
+.summaryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.summaryRow {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%;
+
+}
+
+.statContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 0
+}
+
+.statNum {
+    color: #5CC4A8;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.statText {
+    color: #8C8C8C;
+}

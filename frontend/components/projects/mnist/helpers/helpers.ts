@@ -50,9 +50,9 @@ export const getCellStyle = (cell: Cell) => {
     } else if (cell.type === 'header') {
         return { backgroundColor: 'transparent' }
     } else if (cell.type === 'diagonal') {
-        if (cell.val >= 5) {
+        if (cell.val >= 4) {
             return { backgroundColor: Green.lg }
-        } else if (cell.val >= 3) {
+        } else if (cell.val >= 2) {
             return { backgroundColor: Green.md }
         } else if (cell.val >= 1) {
             return { backgroundColor: Green.sm }
@@ -61,9 +61,9 @@ export const getCellStyle = (cell: Cell) => {
         }
        
     } else {
-        if (cell.val >= 5) {
+        if (cell.val >= 4) {
             return { backgroundColor: Red.lg }
-        } else if (cell.val >= 3) {
+        } else if (cell.val >= 2) {
             return { backgroundColor: Red.md }
         } else if (cell.val >= 1) {
             return { backgroundColor: Red.sm }
@@ -82,3 +82,7 @@ export const getCellContent = (cell: Cell) => {
     }
 }
 
+
+export const getSummary = (model: number) => {
+    return modelData[model].stats
+}
