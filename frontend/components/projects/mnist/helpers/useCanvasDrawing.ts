@@ -169,18 +169,33 @@ export const useCanvasDrawing = ({ onCanvasChange, onPredictionsReset }: UseCanv
         const ctx = canvas.getContext('2d')
         if (!ctx) return null
 
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < imageData.data.length; i += 4) {
-            // Invert RGB values (skip alpha)
-            imageData.data[i] = 255 - imageData.data[i];    
-            imageData.data[i + 1] = 255 - imageData.data[i + 1]; 
-            imageData.data[i + 2] = 255 - imageData.data[i + 2]; 
+        const originalImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+        const invertedImageData = new ImageData(
+            new Uint8ClampedArray(originalImageData.data),
+            originalImageData.width,
+            originalImageData.height
+        );
+
+        for (let i = 0; i < invertedImageData.data.length; i += 4) {
+            invertedImageData.data[i] = 255 - invertedImageData.data[i];     // Red
+            invertedImageData.data[i + 1] = 255 - invertedImageData.data[i + 1]; // Green
+            invertedImageData.data[i + 2] = 255 - invertedImageData.data[i + 2]; // Blue
         }
-        ctx.putImageData(imageData, 0, 0);
-        console.log(imageData)
-        const dataUrl = canvas.toDataURL("image/png"); // e.g., "data:image/png;base64,..."
-        return dataUrl.replace(/^data:image\/png;base64,/, ''); // optionally strip prefix
-        return imageData
+        
+        const tempCanvas = document.createElement('canvas');
+        tempCanvas.width = canvas.width;
+        tempCanvas.height = canvas.height;
+        const tempCtx = tempCanvas.getContext('2d');
+
+        if (!tempCtx) return null;
+
+        // Put the inverted image data on the temporary canvas
+        tempCtx.putImageData(invertedImageData, 0, 0);
+
+        // Get the data URL from the temporary canvas
+        const dataUrl = tempCanvas.toDataURL("image/png");
+        return dataUrl.replace(/^data:image\/png;base64,/, '');
     }, [])
 
     const getCanvasBlob = useCallback((callback: any) => {
