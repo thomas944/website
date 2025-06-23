@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useCanvasDrawing, Prediction } from '../hooks/useCanvasDrawing'
+import { useCanvasDrawing, Prediction } from '../helpers/useCanvasDrawing'
 import { LiaUndoSolid } from "react-icons/lia"
 import { ModelData } from '../MnistPage';
 import styles from './CanvasBlock.module.css'

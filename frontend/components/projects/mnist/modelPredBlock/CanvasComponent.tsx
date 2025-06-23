@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { useCanvasDrawing, Prediction } from '../hooks/useCanvasDrawing'
+import { useCanvasDrawing, Prediction } from '../helpers/useCanvasDrawing'
 
 const CanvasComponent = () => {
     const [showOverlay, setShowOverlay] = useState(true);

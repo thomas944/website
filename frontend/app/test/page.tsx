@@ -6,23 +6,20 @@ import { colors } from '@/utils/colors'
 import CardStackBlock from '../../components/homePage/cardStackBlock/CardStackBlock'
 
 const page = async () => {
-
-    const res = await fetch('http://127.0.0.1:3000/testing',
-        { next: { revalidate: 10 } }
-    )
-
-    const song = await res.json();
     return (
-        <div>
-            {/* <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.TSIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.JSIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.ReactIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.DockerIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.NextJSIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.PythonIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.GitIcon}/>
-        <BaseIcon height={50} width={50} fillColor={colors.lightOrange} path={IconData.GithubIcon}/> */}
-            <CardStackBlock />
+        <div style={{width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center'}}>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8'}}>0</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8'}}>0</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .1}}>1</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .2}}>2</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .3}}>3</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .4}}>4</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .6}}>5</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .7}}>6</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .8}}>7</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: .9}}>8</div>
+            <div style={{height: '45px', width: '45px', backgroundColor: '#5CC4A8', opacity: 1}}>9</div>
+
 
         </div>
     )
