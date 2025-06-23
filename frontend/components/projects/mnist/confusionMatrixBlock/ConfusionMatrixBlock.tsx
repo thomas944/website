@@ -17,7 +17,9 @@ const ConfusionMatrixBlock = () => {
                 {grid.map((row, rowIndex) => (
                     row.map((val, colIndex) => (
                         <div key={`${rowIndex}-${colIndex}`} className={styles.cellContainer}>
-                            <div className={styles.cell} style={getCellStyle(val)}>
+                            <div className={`${styles.cell}${val.type === 'diagonal' || val.type === 'cell' ? ` ${styles.dataCell}` : ''}`} 
+                                style={getCellStyle(val)}
+                            >
                                 {getCellContent(val)}
                             </div>
                         </div>
@@ -42,4 +44,3 @@ const ConfusionMatrixBlock = () => {
 
 export default ConfusionMatrixBlock
 
-        // className={`${styles.bar}${item.digit === guess.digit ? ` ${styles.barHighlight}` : ''}`}

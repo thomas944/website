@@ -76,7 +76,8 @@ export const getCellStyle = (cell: Cell) => {
 export const getCellContent = (cell: Cell) => {
     if (cell.type === 'empty') {
         return ''
-    } else {
+    } 
+    else {
         return cell.val
     }
 }
