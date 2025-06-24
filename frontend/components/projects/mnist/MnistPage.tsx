@@ -34,8 +34,8 @@ const MnistPage = () => {
         <div className={styles.container}>
             <div className={styles.titleContainer}>
                 <div className={styles.headerContainer}>
-                    <span className={styles.topHeader}>Interactive Mnist Explorer</span>
-                    <span className={styles.subHeader}>Draw digits on the canvas and watch an AI model guess what it is</span>
+                    <span className={styles.topHeader}>MNIST Model Explorer</span>
+                    <span className={styles.subHeader}>Draw digits on the canvas and compare predictions across three different AI models!</span>
                 </div>
                 <div className={styles.subContainer}>
                     <div className={styles.contentContainer}>

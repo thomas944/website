@@ -11,7 +11,7 @@ const SummaryBlock = () => {
     const modelStats = getSummary(selectedModel)
     return (
         <div className={styles.container}>
-            <span className={styles.titleText}>Model Summary</span>
+            <span className={styles.titleText}>{`${modelStats.fullName}`}</span>
             <div className={styles.subHeaderContainer}>
                 <span className={styles.subHeaderText}>How it works</span>
                 <span>{modelStats.description}</span>
