@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import styles from './ConfusionMatrixBlock.module.css'
-import { createGrid, getCellContent, getCellStyle, getSummary } from '../helpers/helpers'
-
-const models = ['cnn', 'mlp', 'lr']
+import { createGrid, getCellContent, getCellStyle, getModelData } from '../helpers/helpers'
+import { useSelectedModel } from '../helpers/useSelectModel'
+import { ModelName, MODEL_NAMES } from '../data/modelData'
+// const models = ['cnn', 'mlp', 'lr']
 
 
 const ConfusionMatrixBlock = () => {
-    const [modelNum, setModelNum] = useState(0)
+    // const [modelNum, setModelNum] = useState(0)
+    const { selectedModel, setSelectedModel } = useSelectedModel();
 
-    const grid = createGrid(modelNum)
-    const modelStats = getSummary(modelNum)
+    const grid = createGrid(selectedModel)
+    const modelStats = getModelData(selectedModel)
 
     return (
         <div className={styles.container}>
@@ -29,15 +31,16 @@ const ConfusionMatrixBlock = () => {
             </div>
             <div className={styles.buttonWrapper}>
                 <div className={styles.buttonContainer}>
-                    {models.map((name, index) => (
+                    {MODEL_NAMES.map((name, index) => (
                         <button 
                             key={index} 
-                            onClick={() => setModelNum(index)}
-                            className={`${styles.button}${modelNum === index ? ` ${styles.buttonSelect}` : ''}`}
+                            onClick={() => setSelectedModel(name)}
+                            className={`${styles.button}${selectedModel === name ? ` ${styles.buttonSelect}` : ''}`}
                         >
                             {name.toUpperCase()}
                         </button>
                     ))}
+                  
                 </div>
             </div>
             

@@ -1,4 +1,5 @@
-import { modelData } from "../data/modelData"
+import { modelData, ModelName } from "../data/modelData"
+import { summary } from '../data/summaryData'
 
 interface Cell {
     type: string;
@@ -17,7 +18,7 @@ enum Red {
     lg = '#ef4444'
 }
 
-export const createGrid = (model: number) => {
+export const createGrid = (model: ModelName) => {
     const grid: Cell[][] = []
     const currentData = modelData[model].pred
 
@@ -94,6 +95,10 @@ export const getCellContent = (cell: Cell) => {
 }
 
 
-export const getSummary = (model: number) => {
+export const getModelData = (model: ModelName) => {
     return modelData[model].stats
+}
+
+export const getSummary = (model: ModelName) => {
+    return summary[model].stats
 }

@@ -1,6 +1,88 @@
-export const modelData = [
-    {
-        model: 'cnn', 
+// export const temp = [
+//     {
+//         model: 'cnn',
+//         pred: [
+//             [6, 0, 0, 0, 0, 0, 0, 0, 1, 3],
+//             [1, 1, 0, 2, 0, 5, 0, 0, 0, 1],
+//             [0, 0, 5, 4, 0, 1, 0, 0, 0, 0],
+//             [0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
+//             [0, 1, 0, 0, 6, 2, 0, 0, 1, 0],
+//             [0, 0, 0, 2, 0, 6, 0, 0, 0, 2],
+//             [1, 0, 0, 1, 0, 0, 7, 0, 1, 0],
+//             [0, 2, 1, 4, 1, 0, 0, 2, 0, 0],
+//             [2, 0, 0, 0, 0, 2, 1, 0, 5, 0],
+//             [0, 0, 0, 0, 2, 0, 1, 3, 1, 3],
+//         ],
+//         stats: {
+//             bestPredicted: '3',
+//             mostConfused: '1',
+//             worstConfusion: '1 -> 5',
+//             overallAcc: '51%',
+//         },
+//     },
+//     {
+//         model: 'mlp',
+//         pred: [
+//             [0, 0, 0, 0, 5, 0, 0, 0, 0, 5],
+//             [0, 0, 0, 0, 3, 3, 0, 0, 0, 4],
+//             [0, 1, 0, 2, 5, 1, 0, 0, 0, 1],
+//             [0, 0, 0, 4, 3, 0, 0, 0, 0, 3],
+//             [0, 0, 0, 0, 8, 0, 0, 0, 0, 2],
+//             [0, 0, 1, 1, 5, 2, 0, 0, 0, 1],
+//             [0, 0, 0, 0, 0, 5, 5, 0, 0, 0],
+//             [0, 1, 0, 5, 0, 0, 1, 1, 0, 2],
+//             [0, 0, 0, 3, 1, 2, 3, 0, 1, 0],
+//             [0, 0, 0, 8, 0, 1, 0, 1, 0, 0],
+//         ],
+//         stats: {
+//             bestPredicted: '4',
+//             mostConfused: '0, 1, 2, 9',
+//             worstConfusion: '9 -> 3',
+//             overallAcc: '21%',
+//         },
+//     },
+//     {
+//         model: 'lr',
+//         pred: [
+//             [1, 0, 0, 0, 6, 0, 0, 3, 0, 0],
+//             [0, 0, 0, 0, 5, 2, 0, 0, 0, 3],
+//             [0, 0, 0, 1, 2, 1, 0, 4, 0, 2],
+//             [0, 0, 0, 3, 2, 0, 0, 1, 0, 4],
+//             [0, 0, 0, 0, 8, 0, 0, 0, 0, 2],
+//             [0, 0, 0, 1, 5, 1, 0, 1, 0, 2],
+//             [0, 0, 0, 0, 1, 3, 6, 0, 0, 0],
+//             [0, 1, 0, 5, 0, 1, 1, 2, 0, 0],
+//             [0, 0, 0, 5, 1, 1, 3, 0, 0, 0],
+//             [0, 0, 0, 4, 1, 1, 0, 3, 0, 1],
+//         ],
+//         stats: {
+//             bestPredicted: '4',
+//             mostConfused: '1, 2, 8',
+//             worstConfusion: '0 -> 4',
+//             overallAcc: '22%',
+//         },
+//     }
+// ]
+
+export type ModelName = "CNN" | "MLP" | "LR";
+
+export const MODEL_NAMES: ModelName[] = ["CNN", "MLP", "LR"];
+
+export interface Stats {
+  bestPredicted: string;
+  mostConfused: string;
+  worstConfusion: string;
+  overallAcc: string;
+}
+
+export interface ModelEntry {
+  pred: number[][]; // confusion matrix
+  stats: Stats;
+}
+
+
+export const modelData = {
+    'CNN': {
         pred: [
             [6, 0, 0, 0, 0, 0, 0, 0, 1, 3],
             [1, 1, 0, 2, 0, 5, 0, 0, 0, 1],
@@ -20,8 +102,7 @@ export const modelData = [
             overallAcc: '51%',
         },
     },
-    {
-        model: 'mlp',
+    'MLP': {
         pred: [
             [0, 0, 0, 0, 5, 0, 0, 0, 0, 5],
             [0, 0, 0, 0, 3, 3, 0, 0, 0, 4],
@@ -39,10 +120,9 @@ export const modelData = [
             mostConfused: '0, 1, 2, 9',
             worstConfusion: '9 -> 3',
             overallAcc: '21%',
-        }, 
+        },
     },
-    {
-        model: 'lr',
+    'LR': {
         pred: [
             [1, 0, 0, 0, 6, 0, 0, 3, 0, 0],
             [0, 0, 0, 0, 5, 2, 0, 0, 0, 3],
@@ -60,6 +140,6 @@ export const modelData = [
             mostConfused: '1, 2, 8',
             worstConfusion: '0 -> 4',
             overallAcc: '22%',
-        }, 
+        },
     }
-]
+}

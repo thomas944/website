@@ -9,6 +9,7 @@ import PredictionsBlock from './predictionsBlock/PredictionsBlock';
 import TipsBlock from './tipsBlock/TipsBlock';
 import SummaryBlock from './summaryBlock/SummaryBlock';
 import styles from './MnistPage.module.css';
+import { SelectedModelProvider } from './helpers/useSelectModel';
 import { lg, md } from './layouts'
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -29,6 +30,7 @@ const MnistPage = () => {
     const [isLoading, setIsLoading] = useState(false)
 
     return (
+
         <div className={styles.container}>
             <div className={styles.titleContainer}>
                 <div className={styles.headerContainer}>
@@ -37,32 +39,34 @@ const MnistPage = () => {
                 </div>
                 <div className={styles.subContainer}>
                     <div className={styles.contentContainer}>
-                        <ResponsiveGridLayout
-                            layouts={{lg: lg, md: md}}
-                            breakpoints={{lg: 900, md: 500}}
-                            cols={{ lg:3, md: 2}}
-                            rowHeight={100}
-                            isDraggable={false}
-                            isResizable={false}
-                            useCSSTransforms
-                            className="layout"
-                        >
-                            <div key="Canvas">
-                                <CanvasBlock setData={setData}/>
-                            </div>
-                            <div key="ModelPred">
-                                <PredictionsBlock data={data} />
-                            </div>
-                            <div key="Tips">
-                                <TipsBlock />
-                            </div>
-                            <div key="Stats">
-                                <ConfusionMatrixBlock />
-                            </div>
-                            <div>
-                                <SummaryBlock />
-                            </div>
-                        </ResponsiveGridLayout>
+                        <SelectedModelProvider>
+                            <ResponsiveGridLayout
+                                layouts={{ lg: lg, md: md }}
+                                breakpoints={{ lg: 900, md: 500 }}
+                                cols={{ lg: 3, md: 2 }}
+                                rowHeight={100}
+                                isDraggable={false}
+                                isResizable={false}
+                                useCSSTransforms
+                                className="layout"
+                            >
+                                <div key="Canvas">
+                                    <CanvasBlock setData={setData} />
+                                </div>
+                                <div key="ModelPred">
+                                    <PredictionsBlock data={data} />
+                                </div>
+                                <div key="Tips">
+                                    <TipsBlock />
+                                </div>
+                                <div key="Stats">
+                                    <ConfusionMatrixBlock />
+                                </div>
+                                <div key="Summary">
+                                    <SummaryBlock />
+                                </div>
+                            </ResponsiveGridLayout>
+                        </SelectedModelProvider>
                     </div>
                 </div>
             </div>
