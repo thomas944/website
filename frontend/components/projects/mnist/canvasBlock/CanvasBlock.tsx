@@ -62,20 +62,23 @@ const CanvasBlock = ({ setData }: CanvasBlockProps) => {
                     className={styles.canvas}
                 />
             </div>
-            <div className={styles.buttonContainer}>
-                <button onClick={() => undoLastStroke()}
-                    className={styles.undoButton}>
-                    <span>Undo</span>
-                </button>
-                <button onClick={() => clearCanvas()}
-                    className={styles.clearButton}>
-                    Clear
-                </button>
-                <button onClick={handlePredict}
-                    className={styles.predictButton}>
-                    Predict
-                </button>
+            <div className={styles.buttonWrapper}>
+                <div className={styles.buttonContainer}>
+                    <button onClick={() => undoLastStroke()}
+                        className={styles.undoButton}>
+                        <span>Undo</span>
+                    </button>
+                    <button onClick={() => clearCanvas()}
+                        className={styles.clearButton}>
+                        Clear
+                    </button>
+                    <button onClick={handlePredict}
+                        className={styles.predictButton}>
+                        Predict
+                    </button>
+                </div>
             </div>
+
         </div>
     )
 }

@@ -55,13 +55,19 @@
     z-index: 10;
 }
 
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .buttonContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     /* padding-top: 20px; */
-    padding: 20px 20px
+    padding: 20px 20px;
+    width: 270px;
 }
 
 .button {

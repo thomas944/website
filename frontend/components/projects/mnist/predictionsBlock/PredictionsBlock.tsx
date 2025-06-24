@@ -39,9 +39,10 @@ const PredictionsBlock = ({ data }: PredictionBlockProps) => {
                 ))
             ) : (
                 // Render 3 empty blocks
-                Array.from({ length: 3 }, (_, index) => (
-                    <EmptyBlock key={`empty-${index}`} />
-                ))
+                // Array.from({ length: 3 }, (_, index) => (
+                //     <EmptyBlock key={`empty-${index}`} />
+                // ))
+                <EmptyBlock />
             )}
         </div>
     )

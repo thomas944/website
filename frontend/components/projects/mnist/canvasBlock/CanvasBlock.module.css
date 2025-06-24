@@ -39,6 +39,13 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 1rem;
+    width: 270px;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .undoButton {

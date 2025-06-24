@@ -27,17 +27,20 @@ const ConfusionMatrixBlock = () => {
                     ))
                 ))}
             </div>
-            <div className={styles.buttonContainer}>
-                {models.map((name, index) => (
-                    <button 
-                        key={index} 
-                        onClick={() => setModelNum(index)}
-                        className={`${styles.button}${modelNum === index ? ` ${styles.buttonSelect}` : ''}`}
-                    >
-                        {name.toUpperCase()}
-                    </button>
-                ))}
+            <div className={styles.buttonWrapper}>
+                <div className={styles.buttonContainer}>
+                    {models.map((name, index) => (
+                        <button 
+                            key={index} 
+                            onClick={() => setModelNum(index)}
+                            className={`${styles.button}${modelNum === index ? ` ${styles.buttonSelect}` : ''}`}
+                        >
+                            {name.toUpperCase()}
+                        </button>
+                    ))}
+                </div>
             </div>
+            
             <div className={styles.summaryContainer}>
                 <div className={styles.summaryRow}>
                     <div className={styles.statContainer}>
