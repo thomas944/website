@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import styles from './ConfusionMatrixBlock.module.css'
 import { createGrid, getCellContent, getCellStyle, getModelData } from '../helpers/helpers'
 import { useSelectedModel } from '../helpers/useSelectModel'
-import { ModelName, MODEL_NAMES } from '../data/modelData'
-// const models = ['cnn', 'mlp', 'lr']
+import {  MODEL_NAMES } from '../data/modelData'
 
 
 const ConfusionMatrixBlock = () => {
-    // const [modelNum, setModelNum] = useState(0)
     const { selectedModel, setSelectedModel } = useSelectedModel();
 
     const grid = createGrid(selectedModel)

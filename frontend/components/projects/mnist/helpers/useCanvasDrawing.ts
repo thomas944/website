@@ -24,10 +24,7 @@ export const useCanvasDrawing = ({ onCanvasChange, onPredictionsReset }: UseCanv
     const [strokeHistory, setStrokeHistory] = useState<Point[][]>([])
     const [currentStroke, setCurrentStroke] = useState<Point[]>([])
 
-    // const ctx = useRef<CanvasRenderingContext2D | null>(null)
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
-    // const overlay = useRef<HTMLElement | null>(null)
-
 
     const initializeCanvas = useCallback(() => {
         const canvas = canvasRef.current;

@@ -31,8 +31,6 @@ const ModelBlock = ({ name, output, guess }: ModelData) => {
                                     <div
                                         style={{
                                             height: `${(item.confidence / maxConfidence) * 100}%`,
-                                            // width: '100%',
-                                            // backgroundColor: 'black'
                                         }}
                                         className={`${styles.bar}${item.digit === guess.digit ? ` ${styles.barHighlight}` : ''}`}
                                     >

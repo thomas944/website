@@ -64,7 +64,6 @@
     background-color: #FB8B9C;
     padding: 6px 10px;
     border-radius: 1rem;
-    /* opacity: 60%; */
     font-size: 1.2rem;
     cursor: pointer;
 
@@ -72,8 +71,6 @@
 
 .predictButton {
     width: 80px;
-
-    /* color: white; */
     background-color: #C4DC69;
     padding: 6px 10px;
     border-radius: 1rem;

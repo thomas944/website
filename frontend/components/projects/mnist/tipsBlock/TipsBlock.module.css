@@ -10,17 +10,15 @@
     flex-direction: column;
 }
 
-/* Add these styles to your TipsBlock.module.css */
-
 .tipsList {
     margin: 12px 0;
     padding-left: 0;
-    list-style: none; /* Remove default bullets first */
+    list-style: none; 
 }
 
 .tipItem {
     position: relative;
-    padding-left: 20px; /* Space for custom bullet */
+    padding-left: 20px; 
     margin-bottom: 8px;
     line-height: 1.4;
 }
@@ -31,16 +29,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: #333; /* Adjust color as needed */
+    color: #333; 
     font-weight: bold;
     font-size: 1.1em;
 }
 
-/* Alternative: if you want different bullet styles */
-/* 
-.tipItem::before {
-    content: "▸"; // Triangle bullet
-    content: "→"; // Arrow bullet  
-    content: "✓"; // Checkmark bullet
-}
-*/

@@ -29,7 +29,6 @@
 
 .contentContainer {
     width: 100%;
-    /* padding: 0 4rem; */
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -69,11 +68,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* margin-top: 1.5rem; */
     color: #4c4c4c;
     cursor: pointer;
-    /* width: 160px; */
-    /* justify-content: center; */
 }
 
 .button:hover {
@@ -87,18 +83,7 @@
 }
 
 
-/* @media screen and (max-width: 860px) {
-    .yearText {
-        font-size: 8rem;
-
-    }
-} */
-
 @media screen and (max-width: 600px) {
-    /* .yearText {
-        font-size: 5em;
-    } */
-
     .titleText {
         padding-top: 2.5rem;
     }
