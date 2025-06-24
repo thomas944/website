@@ -54,6 +54,7 @@
     padding: 4px 10px;
     border-radius: 1rem;
     font-size: 1.2rem;
+    cursor: pointer;
 
 }
 
@@ -65,6 +66,8 @@
     border-radius: 1rem;
     /* opacity: 60%; */
     font-size: 1.2rem;
+    cursor: pointer;
+
 }
 
 .predictButton {
@@ -75,4 +78,6 @@
     padding: 6px 10px;
     border-radius: 1rem;
     font-size: 1.2rem;
+    cursor: pointer;
+
 }
