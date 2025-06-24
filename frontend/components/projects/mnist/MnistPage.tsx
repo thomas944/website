@@ -6,6 +6,8 @@ import { colors } from '@/utils/colors';
 import CanvasBlock from './canvasBlock/CanvasBlock';
 import ConfusionMatrixBlock from './confusionMatrixBlock/ConfusionMatrixBlock';
 import PredictionsBlock from './predictionsBlock/PredictionsBlock';
+import TipsBlock from './tipsBlock/TipsBlock';
+import SummaryBlock from './summaryBlock/SummaryBlock';
 import styles from './MnistPage.module.css';
 import { lg, md } from './layouts'
 
@@ -51,8 +53,14 @@ const MnistPage = () => {
                             <div key="ModelPred">
                                 <PredictionsBlock data={data} />
                             </div>
+                            <div key="Tips">
+                                <TipsBlock />
+                            </div>
                             <div key="Stats">
                                 <ConfusionMatrixBlock />
+                            </div>
+                            <div>
+                                <SummaryBlock />
                             </div>
                         </ResponsiveGridLayout>
                     </div>

@@ -77,8 +77,19 @@ export const getCellContent = (cell: Cell) => {
     if (cell.type === 'empty') {
         return ''
     } 
-    else {
+    if (cell.type === 'header') {
         return cell.val
+    }
+    else {
+        if (cell.val === 0) {
+            return 0
+        } 
+        else if (cell.val === 10) {
+            return 1
+        }
+        else {
+            return  '.' + cell.val
+        }
     }
 }
 
