@@ -45,13 +45,74 @@
     font-size: 1.5rem;
 }
 
+
+.layersContainer {
+    margin-top: 15px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 8px;
+    
+}
+
+/* Custom scrollbar styling */
+.layersContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.layersContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.layersContainer::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.layersContainer::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+.layerContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* background-color: #eaeaea; */
+    border-radius: 1rem;
+    padding: .5rem;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+.layerItem {
+
+}
+
 .rightContainer {
-    padding: 1rem;
+    /* padding: 2rem 0 0 1rem; */
+    padding: 1rem 1rem 1rem 1rem;
     width: 50%;
+        height: 100%;
+
+    border: 1px solid #eaeaea;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.rightHeaderText{
+    font-size: 1.5rem;
+}
+
+.listContainer {
+    margin-top: 15px;
 }
 
 .listElement {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
+}
+
+.subText {
+    color: #8c8c8c
 }

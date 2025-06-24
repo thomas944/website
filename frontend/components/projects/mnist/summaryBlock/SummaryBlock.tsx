@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './SummaryBlock.module.css'
 import { useSelectedModel } from '../helpers/useSelectModel'
 import { getSummary } from '../helpers/helpers'
+import { getLayerStyle } from '../helpers/helpers'
 
 const SummaryBlock = () => {
 
@@ -13,40 +14,48 @@ const SummaryBlock = () => {
             <span className={styles.titleText}>Model Summary</span>
             <div className={styles.subHeaderContainer}>
                 <span className={styles.subHeaderText}>How it works</span>
-                <span>Uses convolutional layers to detect spatial patterns and features in digit images.</span>
+                <span>{modelStats.description}</span>
             </div>
             <div className={styles.subContainer}>
                 <div className={styles.leftContainer}>
                     <span className={styles.leftHeaderText}>Architecture</span>
-                    <div>
-
+                    <div className={styles.layersContainer}>
+                        {modelStats.layers.map((layer, index) => (
+                            <div key={index} className={styles.layerItem}>
+                                <div className={styles.layerContent} style={getLayerStyle(layer.name)}>
+                                    <span>{layer.name}</span>
+                                    <span>{layer.dimension}</span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className={styles.rightContainer}>
-                    <ul>
+                    <span className={styles.rightHeaderText}>Performance</span>
+                    <ul className={styles.listContainer}>
                         <li className={styles.listElement}>
-                            <span>{modelStats.trainTime}</span>
-                            <span>Train Time</span>
-                        </li>
-                        <li className={styles.listElement}>
-                            <span>{modelStats.evalTime}</span>
-                            <span>Eval Time</span>
-                        </li>
-                        <li className={styles.listElement}>
-                            <span>{modelStats.trainAcc}</span>
-                            <span>Train Acc</span>
-                        </li>
-                        <li className={styles.listElement}>
-                            <span>{modelStats.testAcc}</span>
-                            <span>Test Acc</span>
+                            <span>{`${modelStats.size}MB`}</span>
+                            <span className={styles.subText}>Model Size</span>
                         </li>
                         <li className={styles.listElement}>
                             <span>{modelStats.params}</span>
-                            <span>Trainable Params</span>
+                            <span className={styles.subText}>Trainable Parameters</span>
                         </li>
                         <li className={styles.listElement}>
-                            <span>{modelStats.size}</span>
-                            <span>Model Size</span>
+                            <span>{`${modelStats.trainTime}s`}</span>
+                            <span className={styles.subText}>Train Time</span>
+                        </li>
+                        <li className={styles.listElement}>
+                            <span>{`${modelStats.evalTime}s`}</span>
+                            <span className={styles.subText}>Eval Time</span>
+                        </li>
+                        <li className={styles.listElement}>
+                            <span>{`${modelStats.trainAcc}%`}</span>
+                            <span className={styles.subText}>Train Accuracy</span>
+                        </li>
+                        <li className={styles.listElement}>
+                            <span>{`${modelStats.testAcc}%`}</span>
+                            <span className={styles.subText}>Test Accuracy</span>
                         </li>
                     </ul>
                 </div>

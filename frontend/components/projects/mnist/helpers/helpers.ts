@@ -18,6 +18,11 @@ enum Red {
     lg = '#ef4444'
 }
 
+enum Orange {
+    sm = '#FEF3C7',
+    lg = '#F59E0B'
+}
+
 export const createGrid = (model: ModelName) => {
     const grid: Cell[][] = []
     const currentData = modelData[model].pred
@@ -94,6 +99,15 @@ export const getCellContent = (cell: Cell) => {
     }
 }
 
+export const getLayerStyle = (layer: string) => {
+    if (layer === 'Input' || layer === 'Flatten') {
+        return { backgroundColor: Green.sm }
+    } else if (layer === 'Softmax') {
+        return { backgroundColor: Orange.sm }
+    } else {
+        return { backgroundColor: '#eaeaea' }
+    }
+}
 
 export const getModelData = (model: ModelName) => {
     return modelData[model].stats
