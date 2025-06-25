@@ -1,10 +1,10 @@
 "use client"
 
 import React from 'react'
-import LgNav from '@/components/homePage/nav/Nav'
+import LgNav from '@/components/pages/homePage/nav/Nav'
 import { colors } from '@/utils/colors'
 import '@/styles/fonts.css'
-import ContentBlock from '@/components/projectsPage/ContentBlock'
+import ContentBlock from '@/components/pages/projectsPage/ContentBlock'
 import { projectData } from '@/data/projects'
 
 const page = () => {

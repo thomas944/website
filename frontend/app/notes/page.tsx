@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import LgNav from '@/components/homePage/nav/Nav'
+import LgNav from '@/components/pages/homePage/nav/Nav'
 import { colors } from '@/utils/colors'
-import NotesBlock from '@/components/notesPage/NotesBlock'
+import NotesBlock from '@/components/pages/notesPage/NotesBlock'
 
 const page = () => {
     return (

@@ -6,16 +6,16 @@ import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { colors } from '@/utils/colors';
 import { lg, md, sm, xs } from '../../utils/layouts'
-import LgNav from '@/components/homePage/nav/Nav';
-import NameBlock from '@/components/homePage/nameBlock/NameBlock';
-import BlogBlock from '@/components/homePage/blogBlock/BlogBlock';
-import EmailBlock from '@/components/homePage/emailBlock/EmailBlock';
-import TechnologyBlock from '@/components/homePage/techStackBlock/TechnologyBlock';
-import ProjectsBlock from '@/components/homePage/projectsBlock/ProjectsBlock';
-import AboutBlock from '@/components/homePage/aboutBlock/AboutBlock';
-import SocialMediaBlock from '@/components/homePage/socialMediaBlock/SocialMediaBlock';
-import CardStackBlock from '@/components/homePage/cardStackBlock/CardStackBlock';
-import SpotifyBlock from '@/components/homePage/spotifyBlock/SpotifyBlock';
+import LgNav from '@/components/pages/homePage/nav/Nav';
+import NameBlock from '@/components/pages/homePage/nameBlock/NameBlock';
+import BlogBlock from '@/components/pages/homePage/blogBlock/BlogBlock';
+import EmailBlock from '@/components/pages/homePage/emailBlock/EmailBlock';
+import TechnologyBlock from '@/components/pages/homePage/techStackBlock/TechnologyBlock';
+import ProjectsBlock from '@/components/pages/homePage/projectsBlock/ProjectsBlock';
+import AboutBlock from '@/components/pages/homePage/aboutBlock/AboutBlock';
+import SocialMediaBlock from '@/components/pages/homePage/socialMediaBlock/SocialMediaBlock';
+import CardStackBlock from '@/components/pages/homePage/cardStackBlock/CardStackBlock';
+import SpotifyBlock from '@/components/pages/homePage/spotifyBlock/SpotifyBlock';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
