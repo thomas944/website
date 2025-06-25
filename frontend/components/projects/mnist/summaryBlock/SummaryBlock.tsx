@@ -23,8 +23,8 @@ const SummaryBlock = () => {
                         {modelStats.layers.map((layer, index) => (
                             <div key={index} className={styles.layerItem}>
                                 <div className={styles.layerContent} style={getLayerStyle(layer.name)}>
-                                    <span>{layer.name}</span>
-                                    <span>{layer.dimension}</span>
+                                    <span className={styles.layerNameText}>{layer.name}</span>
+                                    <span className={styles.layerDimText}>{layer.dimension}</span>
                                 </div>
                             </div>
                         ))}
@@ -34,27 +34,27 @@ const SummaryBlock = () => {
                     <span className={styles.rightHeaderText}>Performance</span>
                     <ul className={styles.listContainer}>
                         <li className={styles.listElement}>
-                            <span>{`${modelStats.size}MB`}</span>
+                            <span className={styles.numText}>{`${modelStats.size}MB`}</span>
                             <span className={styles.subText}>Model Size</span>
                         </li>
                         <li className={styles.listElement}>
-                            <span>{modelStats.params}</span>
+                            <span className={styles.numText}>{modelStats.params}</span>
                             <span className={styles.subText}>Trainable Parameters</span>
                         </li>
                         <li className={styles.listElement}>
-                            <span>{`${modelStats.trainTime}s`}</span>
+                            <span className={styles.numText}>{`${modelStats.trainTime}s`}</span>
                             <span className={styles.subText}>Train Time</span>
                         </li>
                         <li className={styles.listElement}>
-                            <span>{`${modelStats.evalTime}s`}</span>
+                            <span className={styles.numText}>{`${modelStats.evalTime}s`}</span>
                             <span className={styles.subText}>Eval Time</span>
                         </li>
                         <li className={styles.listElement}>
-                            <span>{`${modelStats.trainAcc}%`}</span>
+                            <span className={styles.numText}>{`${modelStats.trainAcc}%`}</span>
                             <span className={styles.subText}>Train Accuracy</span>
                         </li>
                         <li className={styles.listElement}>
-                            <span>{`${modelStats.testAcc}%`}</span>
+                            <span className={styles.numText}>{`${modelStats.testAcc}%`}</span>
                             <span className={styles.subText}>Test Accuracy</span>
                         </li>
                     </ul>

@@ -109,3 +109,42 @@
 .subText {
     color: #8c8c8c
 }
+
+@media screen and (max-width: 540px) {
+    .titleText {
+        font-size: 1.5rem
+    }
+    .subHeaderText {
+        font-size: 1.25rem
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .subContainer {
+        height: 420px;
+    }
+    .leftHeaderText {
+        font-size: 1rem
+    }   
+
+    .rightHeaderText {
+        font-size: 1rem;
+    }
+
+    .numText {
+        font-size: .75rem
+    }
+
+    .subText {
+        font-size: .75rem;
+    }
+    .layerNameText {
+        font-size: .75rem;
+
+    }
+    .layerDimText {
+        font-size: .75rem;
+
+    }
+
+}
