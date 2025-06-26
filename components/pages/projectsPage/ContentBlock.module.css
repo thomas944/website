@@ -1,0 +1,94 @@
+.container {
+    background-color: #eff7ff;
+    max-width: 980px;
+    width: 100%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 8rem;
+    box-sizing: border-box;
+}
+
+.yearText {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: clamp(4rem, 15vw, 12.5rem);    font-family: 'PP Machina Inktrap', sans-serif;
+    font-weight: 800;
+    background-color: #95B7DF;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+    background-size: 15px 15px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+.contentContainer {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem
+}
+
+.titleText {
+    font-family: 'PP Machina Inktrap', sans-serif;
+    font-weight: 800;
+
+}
+
+.descriptionText {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    display: block;
+    color: #4c4c4c;
+    padding: 0.5rem 0 1.5rem 0;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.button {
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #4c4c4c;
+    border-radius: 20rem;
+    font-size: 1.5rem;
+    padding: .5rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #4c4c4c;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #95B7DF;
+}
+
+.arrow {
+    color: #4c4c4c;
+    height: 32px;
+    width: 32px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .titleText {
+        padding-top: 2.5rem;
+    }
+    .container {
+        padding: 2rem;
+    }
+
+}
