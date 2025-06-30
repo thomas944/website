@@ -17,7 +17,6 @@ const CanvasBlock = ({ setData }: CanvasBlockProps) => {
         clearCanvas,
         undoLastStroke,
         getCanvasImageData,
-        getCanvasBlob
     } = useCanvasDrawing({
         onCanvasChange: (hasContent) => {
             setShowOverlay(!hasContent);
@@ -35,20 +34,13 @@ const CanvasBlock = ({ setData }: CanvasBlockProps) => {
 
         const base64Image = getCanvasImageData()
 
-        const res = await fetch("https://huggingface.co/pham944/mnist-multimodel-api", {
+        const res = await fetch("http://3.143.204.131:8000/mnist/predict/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer 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",
             },
             body: JSON.stringify({ image: base64Image })
         });
-
-        if (!res.ok) {
-            const error = await res.json()
-            throw new Error(error.error || "Unknown error from HF API");
-
-        }
 
         const data = await res.json();
         setData(data)
