@@ -27,8 +27,8 @@ export const notesData: Note[] = [
         link: 'https://www.google.com/'
     },
     {
-        date: '10 May 2022',
-        title: 'asdf',
-        link: 'https://www.google.com/'
+        date: '1 May 2024',
+        title: 'Beginning of website',
+        link: 'notes/1'
     }
 ]

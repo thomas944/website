@@ -21,8 +21,8 @@ const LgNav = () => {
                             <div
                                 className={styles.navLink}
                                 style={{
-                                    borderBottom: pathname === path ? 'solid' : 'none',
-                                    fontWeight: pathname === path ? 500 : 400,                                  
+                                    borderBottom: pathname.includes(path) ? 'solid' : 'none',
+                                    fontWeight: pathname.includes(path) ? 500 : 400,                                  
                                 }}
                             >
                                 {path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}

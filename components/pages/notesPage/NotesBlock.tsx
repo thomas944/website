@@ -1,6 +1,7 @@
 import React from 'react'
 import { notesData } from '@/data/notes'
 import styles from './NotesBlock.module.css'
+import Link from 'next/link'
 
 const NotesBlock = () => {
     return (
@@ -15,11 +16,14 @@ const NotesBlock = () => {
                             key={index}
                             className={styles.note}
                         >
+                            
                             <span className={styles.noteDateText}>
                                 {entry.date}
                             </span>
                             <span className={styles.noteTitleText}>
-                                {entry.title}
+                                <Link href={entry.link}>
+                                    {entry.title}
+                                </Link>
                             </span>
                         </li>
                     ))}
