@@ -13,9 +13,9 @@ const LgNav = () => {
                 className={`${styles.navContainer} ${
                     pathname === '/home' ? styles.lgView : styles.mdView
                 }`}>
-                <div className={styles.title}><span>PLCH</span></div>
+                <div className={styles.titleContainer}><span className={styles.title}>PLCH</span></div>
                 
-                {/* <div className={styles.linkGroup}>
+                <div className={styles.linkGroup}>
                     {['/home', '/projects', '/notes'].map((path) => (
                         <Link key={path} href={path}>
                             <div
@@ -29,8 +29,8 @@ const LgNav = () => {
                             </div>
                         </Link>
                     ))}
-                </div> */}
-                <div style={{height: '100%', display: 'flex', alignItems: 'center'}}>
+                </div>
+                <div className={styles.menuContainer}>
                     <Menu />
                 </div>
             </div>
