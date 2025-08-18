@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './Nav.module.css'
+import Menu from './Menu'
 
 const LgNav = () => {
     const pathname = usePathname()
@@ -12,9 +13,9 @@ const LgNav = () => {
                 className={`${styles.navContainer} ${
                     pathname === '/home' ? styles.lgView : styles.mdView
                 }`}>
-                <div className={styles.title}>Thomas Pham</div>
-
-                <div className={styles.linkGroup}>
+                <div className={styles.title}><span>PLCH</span></div>
+                
+                {/* <div className={styles.linkGroup}>
                     {['/home', '/projects', '/notes'].map((path) => (
                         <Link key={path} href={path}>
                             <div
@@ -28,6 +29,9 @@ const LgNav = () => {
                             </div>
                         </Link>
                     ))}
+                </div> */}
+                <div style={{height: '100%', display: 'flex', alignItems: 'center'}}>
+                    <Menu />
                 </div>
             </div>
         </div>
