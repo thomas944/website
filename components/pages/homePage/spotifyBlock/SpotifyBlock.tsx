@@ -29,26 +29,26 @@ const SpotifyBlock = () => {
     const defaultImg = 'https://i.scdn.co/image/ab67616d0000485124f8c3ad20b7c6cfecb5832e';
     const defaultUrl = 'https://open.spotify.com/track/5mtTAScDytxMMqZj14NmlN';
 
-    useEffect(() => {
-        const fetchSong = async () => {
-            try {
-                const res = await fetch("http://127.0.0.1:3000/status")
-                const songData: SongData = await res.json();
-                setOnline(songData.online)
-                setSong(songData.track.name)
-                setArtists(songData.track.artists.join(', '))
-                setImg(songData.track.image)
-                setUrl(songData.track.url)
-            } catch (error) {
-                console.error('Failed to fetch song:', error)
-            }
-        };
+    // useEffect(() => {
+    //     const fetchSong = async () => {
+    //         try {
+    //             const res = await fetch("process.env.SPOTIFY_API_URL")
+    //             const songData: SongData = await res.json();
+    //             setOnline(songData.online)
+    //             setSong(songData.track.name)
+    //             setArtists(songData.track.artists.join(', '))
+    //             setImg(songData.track.image)
+    //             setUrl(songData.track.url)
+    //         } catch (error) {
+    //             console.error('Failed to fetch song:', error)
+    //         }
+    //     };
 
-        fetchSong()
-        const interval = setInterval(fetchSong, 300 * 1000)
+    //     fetchSong()
+    //     const interval = setInterval(fetchSong, 300 * 1000)
 
-        return () => clearInterval(interval);
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
 
     return (

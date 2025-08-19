@@ -5,21 +5,14 @@ export const projectData: ProjectYearGroup[] = [
         year: 2025,
         projects: [
             {
-                title: 'project1',
-                description: `Created an app for generating typographic art... Created an app for generating typographic ar Created an app for generating typographic ar Created an app for generating typographic ar`,
+                title: 'ParkPal',
+                description: `
+                    Android application that helps users explore national parks by searching for parks, 
+                    viewing detailed information, tracking visited locations, discovering popular destinations, 
+                    and planning trips with an integrated AI assistant.`,
                 actions: {
-                    visit: 'https://www.google.com/',
-                    demo: 'https://www.youtube.com/',
-                    github: 'https://github.com/thomas944',
-                },
-            },
-            {
-                title: 'project2',
-                description: 'description2',
-                actions: {
-                    visit: 'https://www.google.com/',
-                    demo: 'https://www.youtube.com/',
-                    github: 'https://github.com/thomas944',
+                    demo: 'https://www.youtube.com/watch?v=LTI_4Dn43mc',
+                    github: 'https://github.com/thomas944/ParkPal',
                 },
             },
         ],
@@ -28,12 +21,11 @@ export const projectData: ProjectYearGroup[] = [
         year: 2024,
         projects: [
             {
-                title: 'project1',
+                title: 'MNIST Model Explorer',
                 description: `Created an app for generating typographic art...`,
                 actions: {
-                    visit: 'https://www.google.com/',
-                    demo: 'https://www.youtube.com/',
-                    github: 'https://github.com/thomas944',
+                    visit: 'https://mnist-digit-explorer-cpj1.vercel.app/',
+                    github: 'https://github.com/thomas944/mnist-digit-explorer',
                 },
             },
         ],

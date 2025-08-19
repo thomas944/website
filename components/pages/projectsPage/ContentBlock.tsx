@@ -20,19 +20,19 @@ const ContentBlock = ({ year, projects }: ContentBlockProps) => {
                         <div>
                             <span className={styles.descriptionText}>{project.description}</span>
                             <div className={styles.buttonContainer}>
-                                {project.actions.visit && (
-                                    <a href={project.actions.visit} target="_blank" rel="noopener noreferrer">
-                                        <button className={styles.button}>
-                                            <MdOutlineArrowOutward className={styles.arrow} />
-                                            <span>Visit</span>
-                                        </button>
-                                    </a>
-                                )}
                                 {project.actions.github && (
                                     <a href={project.actions.github} target="_blank" rel="noopener noreferrer">
                                         <button className={styles.button}>
                                             <MdOutlineArrowOutward className={styles.arrow} />
                                             <span>Github</span>
+                                        </button>
+                                    </a>
+                                )}
+                                {project.actions.visit && (
+                                    <a href={project.actions.visit} target="_blank" rel="noopener noreferrer">
+                                        <button className={styles.button}>
+                                            <MdOutlineArrowOutward className={styles.arrow} />
+                                            <span>Visit</span>
                                         </button>
                                     </a>
                                 )}
