@@ -10,9 +10,7 @@ const page = () => {
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'Inter, sans-serif' }}>
 
                 <LgNav />
-                <div style={{width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <AboutPage />
-                </div>
+                <AboutPage />
                 
             </div>
       </div>
