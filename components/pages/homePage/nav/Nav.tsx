@@ -13,7 +13,9 @@ const LgNav = () => {
                 className={`${styles.navContainer} ${
                     pathname === '/home' ? styles.lgView : styles.mdView
                 }`}>
-                <div className={styles.titleContainer}><span className={styles.title}>PLCH</span></div>
+                <Link href={'/home'}>
+                    <div className={styles.titleContainer}><span className={styles.title}>tpham</span></div>
+                </Link>
                 
                 <div className={styles.linkGroup}>
                     {['/home', '/projects', '/notes'].map((path) => (
@@ -21,8 +23,8 @@ const LgNav = () => {
                             <div
                                 className={styles.navLink}
                                 style={{
-                                    borderBottom: pathname.includes(path) ? 'solid' : 'none',
-                                    fontWeight: pathname.includes(path) ? 500 : 400,                                  
+                                    fontWeight: pathname.includes(path) ? 500 : 400,  
+                                    opacity: pathname.includes(path)? 1 : 0.5                        
                                 }}
                             >
                                 {path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}

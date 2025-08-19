@@ -2,7 +2,7 @@
 import React from 'react'
 import LgNav from '@/components/pages/homePage/nav/Nav'
 import { colors } from '@/utils/colors'
-import Note from '@/components/pages/notesPage/notes/1/Note'
+import Note from '@/components/pages/notesPage/notes/2/Note'
 
 
 const page = () => {

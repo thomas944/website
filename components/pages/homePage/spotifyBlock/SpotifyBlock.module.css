@@ -36,7 +36,7 @@
     color: white;
     font-size: 2.5rem;
     font-weight: 500;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .songContainer {
@@ -53,6 +53,11 @@
     white-space: nowrap;       
     overflow: hidden;         
     text-overflow: ellipsis; 
+    cursor: pointer;
+}
+
+.songName:hover {
+    text-decoration: underline;
 }
 
 .songArtists {
@@ -76,7 +81,7 @@
     font-size: 4.5rem;
     line-height: 1.2;
     font-weight: 500;
-    cursor: pointer
+    /* cursor: pointer */
 }
 
 .songTextSmall {
@@ -86,15 +91,13 @@
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 400;
+    overflow: hidden;         
+    text-overflow: ellipsis; 
 }
 
-.statusTextLarge:hover {
+.songNameSmall:hover {
     text-decoration: underline;
-}
-
-.statusTextSmall:hover {
-    text-decoration: underline;
-
+    cursor: pointer;
 }
 
 

@@ -58,11 +58,14 @@ const SpotifyBlock = () => {
                     <img src={img || defaultImg} className={styles.img} />
                 </div>
                 <div className={styles.contentContainer}>
-                    <span className={styles.statusTextLarge}
-                          onClick={() => window.open(url || defaultUrl, '_blank')}>
+                    <span className={styles.statusTextLarge}>
                         {online ? 'Now Listening' : 'Offline'}</span>
                     <div className={styles.songContainer}>
-                        <span className={styles.songName}>{song || defaultName}</span>
+                        <span className={styles.songName}
+                            onClick={() => window.open(url || defaultUrl, '_blank')}
+                        >
+                            {song || defaultName}
+                        </span>
                         <span className={styles.songArtists}>{artists || defaultArtist}</span>
                     </div>
 
@@ -70,8 +73,7 @@ const SpotifyBlock = () => {
             </div>
 
             <div className={styles.smallContainerView}>
-                <div className={styles.statusTextSmall} 
-                    onClick={() => window.open(url || defaultUrl, '_blank')}>
+                <div className={styles.statusTextSmall}>
                     {online ? (
                         <>
                             <span>Now</span>
@@ -84,7 +86,11 @@ const SpotifyBlock = () => {
                  
                 </div>
                 <div className={styles.songTextSmall}>
-                    <span>{song || defaultName}</span>
+                    <span className={styles.songNameSmall}
+                        onClick={() => window.open(url || defaultUrl, '_blank')}
+                    >
+                        {song || defaultName}
+                    </span>
                     <span>{artists || defaultArtist}</span>
                 </div>
             </div>

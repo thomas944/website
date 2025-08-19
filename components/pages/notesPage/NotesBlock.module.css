@@ -47,6 +47,7 @@
 }
 
 .noteTitleText {
+    font-family: 'PP Machina', sans-serif;
     flex: 1;
     word-wrap: break-word;
     overflow-wrap: break-word;

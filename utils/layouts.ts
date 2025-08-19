@@ -46,13 +46,13 @@ export const xs = [
     { i: 'Name', x: 0, y: 0, w: 1, h: 2.65},
     { i: 'About', x: 0, y: 2.65*1, w: 1, h: 2.65},
 
-    { i: 'Blog', x: 0, y: 2.65*2, w: 1, h: 2.65},
-    { i: 'Projects', x: 0, y: 2.65*3, w: 1, h: 2.65},
+    { i: 'Projects', x: 0, y: 2.65*2, w: 1, h: 2.65},
+    { i: 'TechStack', x: 0, y: 2.65*3, w: 1, h: 2.65},
 
     { i: 'Email', x: 0, y: 2.65*4, w: 1, h: 2.65},
-    { i: 'TechStack', x: 0, y: 2.65*5, w: 1, h: 2.65},
+    { i: 'Blog', x: 0, y: 2.65*5, w: 1, h: 2.65},
 
-    { i: 'Picture', x: 0, y: 2.65*6, w: 1, h: 2.65},
-    { i: 'Spotify', x: 0, y: 2.65*7, w: 1, h: 2.65},
+    { i: 'Spotify', x: 0, y: 2.65*6, w: 1, h: 2.65},
+    { i: 'Picture', x: 0, y: 2.65*7, w: 1, h: 2.65},
     { i: 'SocialMedia', x: 0, y: 2.65*8, w: 1, h: 2.65},
 ]
