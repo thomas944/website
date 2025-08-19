@@ -16,7 +16,8 @@ const AboutBlock = () => {
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.contentText}>
-                    Hello, I am grad student at UT Austin interested in software development and machine learning
+                    Read more about me
+                    {/* Hello, I am grad student at UT Austin interested in software development and machine learning */}
                 </div>
             </div>
         </div>

@@ -1,0 +1,29 @@
+.container {
+    background-color: #242424;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 980px
+}
+
+.title {
+    padding: 1rem 0;
+    color: #D4D4D4;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.date {
+    color: #D4D4D4;
+    opacity: 70%;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+
+.content {
+    padding: 2rem 0;
+    color: #D4D4D4;
+    font-weight: 500;
+    font-size: 20px;
+}
