@@ -2,23 +2,24 @@ import React from 'react'
 import { colors } from '@/utils/colors'
 import styles from './AboutBlock.module.css'
 import Link from 'next/link'
+import { MdOutlineArrowOutward } from 'react-icons/md'
 
 const AboutBlock = () => {
     return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
-                <Link href={'/about'}>
-                    <span className={styles.titleText}>
-                        About
-                    </span>
-                </Link>
-                
+                <span className={styles.titleText}>
+                    About
+                </span>
+
             </div>
             <div className={styles.contentContainer}>
-                <div className={styles.contentText}>
-                    Read more about me
-                    {/* Hello, I am grad student at UT Austin interested in software development and machine learning */}
-                </div>
+                <Link href={'/about'}>
+                    <div className={styles.buttonContainer}>
+                        <MdOutlineArrowOutward />
+                        <span className={styles.contentText}>Read about me</span>
+                    </div>
+                </Link>
             </div>
         </div>
     )
