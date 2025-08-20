@@ -51,7 +51,7 @@ const Note = () => {
                             from scratch. I hope to share how that process went here.
                         </p>
                     </section>
-                    <section>
+                    <section className={styles.section}>
                         <div className={styles.sectionHeader}><span>Design Process</span></div>
                         <div className={styles.sectionSubHeader}><span>Inspiration</span></div>
                         <section>
@@ -131,7 +131,7 @@ const Note = () => {
                                 </li>
                             </ul>
                         </section>
-                        <section>
+                        <section className={styles.section}>
                             <div className={styles.sectionSubHeader}><span>Colors</span></div>
                             <p className={styles.p}>
                                 I wanted to try the dark theme and initially only used black and dark gray as my main colors.
@@ -161,8 +161,23 @@ const Note = () => {
                                 </div>
                             </div>
                         </section>
-                        <section>
-                            
+                        <section className={styles.section}>
+                            <div className={styles.sectionHeader}><span>Tech Stack</span></div>
+                            <p>
+                                Choosing the tech stack was fairly straightforward. Since I was already comfortable
+                                with React, I used this project as an opportunity to learn Next.js — and it ended
+                                up being surprisingly easy to pick up.
+                            </p>
+                            <p>
+                                I chose not to use Tailwind for this project and instead kept the styling in separate CSS files.
+                                Even though it takes a bit more time, I like having the styles isolated because it
+                                makes things feel more organized and easier to reason about.
+                            </p>
+                            <p>
+                                I have recently started using Markdown (mainly through Obsidian), but for this site I'm currently
+                                writing the content directly in JSX for simplicity. I may switch to Markdown or MDX later
+                                as the number of posts grows.
+                            </p>
                         </section>
                     </section>
                 </div>
