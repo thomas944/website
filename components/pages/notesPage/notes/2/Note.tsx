@@ -136,10 +136,10 @@ const Note = () => {
                             <p className={styles.p}>
                                 I wanted to try the dark theme and initially only used black and dark gray as my main colors.
                                 But, I decided to add dark blue and light blue as secondary colors, and later orange as a tertiary color.
-                                I recommend using a tool like <a className={styles.link} href="https://coolors.co/" target="_blank">Coolors</a> to 
+                                I recommend using a tool like <a className={styles.link} href="https://coolors.co/" target="_blank">Coolors</a> to
                                 experiment with color combinations and <a className={styles.link} href="https://huemint.com/" target="_blank">Huemint </a>
                                 to visualize how they would look together.
-                                
+
                             </p>
                             <br />
                             <div className={styles.gridWrapper}>
@@ -161,33 +161,33 @@ const Note = () => {
                                 </div>
                             </div>
                         </section>
-                        <section className={styles.section}>
-                            <div className={styles.sectionHeader}><span>Tech Stack</span></div>
-                            <p className={styles.p}>
-                                Choosing the tech stack was fairly straightforward. Since I was already comfortable
-                                with React, I used this project as an opportunity to learn Next.js — and it ended
-                                up being surprisingly easy to pick up.
-                            </p>
-                            <br />
-                            <p className={styles.p}>
-                                I chose not to use Tailwind for this project and instead kept the styling in separate CSS files.
-                                Even though it takes a bit more time, I like having the styles isolated because it
-                                makes things feel more organized and easier to reason about.
-                            </p>
-                            <br />
-                            <p className={styles.p}>
-                                I have recently started using Markdown (mainly through Obsidian), but for this site I'm currently
-                                writing the content directly in JSX for simplicity. I may switch to Markdown or MDX later
-                                as the number of posts grows.
-                            </p>
-                        </section>
+                    </section>
+                    <section className={styles.section}>
+                        <div className={styles.sectionHeader}><span>Tech Stack</span></div>
+                        <p className={styles.p}>
+                            Choosing the tech stack was fairly straightforward. Since I was already comfortable
+                            with React, I used this project as an opportunity to learn Next.js — and it ended
+                            up being surprisingly easy to pick up.
+                        </p>
+                        <br />
+                        <p className={styles.p}>
+                            I chose not to use Tailwind for this project and instead kept the styling in separate CSS files.
+                            Even though it takes a bit more time, I like having the styles isolated because it
+                            makes things feel more organized and easier to reason about.
+                        </p>
+                        <br />
+                        <p className={styles.p}>
+                            I have recently started using Markdown (mainly through Obsidian), but for this site I'm currently
+                            writing the content directly in JSX for simplicity. I may switch to Markdown or MDX later
+                            as the number of posts grows.
+                        </p>
                     </section>
                     <section className={styles.section}>
                         <div className={styles.sectionHeader}><span>TODOS</span></div>
                         <p className={styles.p}>
                             The site is still a work in progress, and there are a few features and improvements I'd like to add:
                         </p>
-                        <ul className={styles.list}>
+                        <ul className={`${styles.list} ${styles.p}`}>
                             <li> Add a light themed mode and allow toggling between light/dark themes.</li>
                             <li> Get a website domain name. Currently, this website is hosted on vercel.</li>
                             <li> Enable comments and reactions to posts.</li>
@@ -195,6 +195,22 @@ const Note = () => {
                             <li> Add a search bar for filtering notes or projects</li>
                             <li> Tagging system for notes/projects</li>
                         </ul>
+                    </section>
+                    <section className={styles.section}>
+                        <div className={styles.sectionHeader}><span>Final Thoughts</span></div>
+                        <p className={styles.p}>
+                            Not everyting here is completely original. In fact, almost all of it was inspired 
+                            by different references and blended together into something of my own. I enjoy taking
+                            inspiration and ideas from great work that already exists and building on top of it 
+                            in my own way.
+                        </p>
+                        <br />
+                        <p className={styles.p}>
+                            Thanks for taking the time to check it out!
+                        </p>
+                        <p className={styles.p}>
+                           - Thomas Pham
+                        </p>
                     </section>
                 </div>
             </div>
