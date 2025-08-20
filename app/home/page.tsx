@@ -19,7 +19,7 @@ import SpotifyBlock from '@/components/pages/homePage/spotifyBlock/SpotifyBlock'
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-export const Home = () => {
+const Home = () => {
     return (
         <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: colors.black }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'Inter, sans-serif' }}>
