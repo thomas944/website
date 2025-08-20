@@ -163,22 +163,38 @@ const Note = () => {
                         </section>
                         <section className={styles.section}>
                             <div className={styles.sectionHeader}><span>Tech Stack</span></div>
-                            <p>
+                            <p className={styles.p}>
                                 Choosing the tech stack was fairly straightforward. Since I was already comfortable
                                 with React, I used this project as an opportunity to learn Next.js — and it ended
                                 up being surprisingly easy to pick up.
                             </p>
-                            <p>
+                            <br />
+                            <p className={styles.p}>
                                 I chose not to use Tailwind for this project and instead kept the styling in separate CSS files.
                                 Even though it takes a bit more time, I like having the styles isolated because it
                                 makes things feel more organized and easier to reason about.
                             </p>
-                            <p>
+                            <br />
+                            <p className={styles.p}>
                                 I have recently started using Markdown (mainly through Obsidian), but for this site I'm currently
                                 writing the content directly in JSX for simplicity. I may switch to Markdown or MDX later
                                 as the number of posts grows.
                             </p>
                         </section>
+                    </section>
+                    <section className={styles.section}>
+                        <div className={styles.sectionHeader}><span>TODOS</span></div>
+                        <p className={styles.p}>
+                            The site is still a work in progress, and there are a few features and improvements I'd like to add:
+                        </p>
+                        <ul className={styles.list}>
+                            <li> Add a light themed mode and allow toggling between light/dark themes.</li>
+                            <li> Get a website domain name. Currently, this website is hosted on vercel.</li>
+                            <li> Enable comments and reactions to posts.</li>
+                            <li> Display the total number of visits to the website.</li>
+                            <li> Add a search bar for filtering notes or projects</li>
+                            <li> Tagging system for notes/projects</li>
+                        </ul>
                     </section>
                 </div>
             </div>
