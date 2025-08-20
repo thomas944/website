@@ -1,5 +1,4 @@
 import React from 'react'
-import { IconData } from '../Icons'
 
 interface IconProps {
     fillColor: string;

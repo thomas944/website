@@ -15,8 +15,8 @@ const AboutPage = () => {
                 </div>
                 <div>
                     <p>
-                        Hello, I'm a lifelong learner with a passion for programming and mathematics.
-                        I started coding in college after pivoting away from medicine, and I've been enjoying my journey as a software engineer ever since.
+                        Hello, I&apos;m a lifelong learner with a passion for programming and mathematics.
+                        I started coding in college after pivoting away from medicine, and I&apos;ve been enjoying my journey as a software engineer ever since.
                         I hope to learn from others and continuously grow as an engineer.
                     </p>
                     <br></br>

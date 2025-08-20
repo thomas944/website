@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { colors } from '@/utils/colors';
+import React from 'react'
 import styles from './SocialMediaIcon.module.css'
 
 interface IconProps {

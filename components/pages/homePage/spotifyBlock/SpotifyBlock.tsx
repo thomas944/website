@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { colors } from '@/utils/colors'
+import React, { useState } from 'react';
 import styles from './SpotifyBlock.module.css'
 
 

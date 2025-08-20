@@ -80,12 +80,6 @@ const NameBlock = () => {
         alignItems: 'center'
     };
 
-    const textStyle: React.CSSProperties = {
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '7.5rem',
-        fontWeight: 600
-    };
-
     const currentLayerStyle: React.CSSProperties = {
         ...layerStyle,
         backgroundColor: states[currentIndex].bg,

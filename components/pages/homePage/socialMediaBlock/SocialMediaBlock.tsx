@@ -1,5 +1,4 @@
 import React from 'react'
-import { colors } from '@/utils/colors'
 import SocialMediaIcon from './SocialMediaIcon'
 import { IconData } from '@/app/Icons'
 import styles from './SocialMediaBlock.module.css'

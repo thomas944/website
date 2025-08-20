@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { colors } from '@/utils/colors';
+import React from 'react';
 import { MdOutlineArrowOutward } from "react-icons/md";
 import styles from './EmailBlock.module.css'
 

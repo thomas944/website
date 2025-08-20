@@ -1,6 +1,5 @@
 import React from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md"
-import { colors } from '@/utils/colors'
 import styles from './ProjectsBlock.module.css'
 import Link from 'next/link'
 
