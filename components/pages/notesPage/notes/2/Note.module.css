@@ -37,14 +37,23 @@
     padding: 2rem 0;
     color: #D4D4D4;
     font-weight: 500;
-    font-size: 22px;
     width: 100%;
 }
 
+.section {
+    padding-bottom: 2.5rem;
+}
+
 .sectionHeader {
+    font-size: 25px;
     padding: 0 0 1rem 0;
     margin: 1rem 0;
     border-bottom: 1px solid #727272;
+}
+
+.sectionSubHeader {
+    font-size: 22px;
+    padding: 0 0 0.5rem 0;
 }
 
 .p {
@@ -52,3 +61,73 @@
     font-size: 18px;
 }
 
+.list {
+    color: #E68D00;
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.list li {
+  margin: 1rem 0;
+}
+
+.list li::marker {
+    color: #727272
+}
+
+.imgWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    padding: 1rem;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.mdImg {
+    width: 800px;
+    height: 600px;
+}
+
+.lgImg {
+    width: 800px;
+    height: 1400px;
+}
+
+@media screen and (max-width: 670px) {
+    .imgContainer {
+        width: 100%;
+        height: auto;
+    }
+
+    .mgImg {
+        aspect-ratio: 800 / 600; 
+    }
+
+    .lgImg {
+        aspect-ratio: 800 / 1400; 
+    }
+}
+
+
+
+.imgSubtitle {
+    font-size: 18px;
+    padding: 1rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.imgSubtitle:hover {
+    text-decoration: underline;
+}
+
+.listElement {
+    padding: 1.5rem 0;
+}
