@@ -2,8 +2,27 @@ import React from 'react'
 import styles from './Note.module.css'
 import Image from 'next/image'
 import { MdOutlineArrowOutward } from 'react-icons/md'
+import { StyleRegistry } from 'styled-jsx'
 
 const Note = () => {
+    const colors = [
+        { name: 'Dark Orange', color: '#E68D00', subText: '#E68D00', subTextColor: '#38435A' },
+        { name: 'Dark Gray', color: '#242424', subText: '#242424', subTextColor: '#D4D4D4' },
+        { name: 'Black', color: '#000000', subText: '#000000', subTextColor: '#D4D4D4' },
+        { name: 'Dark Blue', color: '#38435A', subText: '#38435A', subTextColor: '#D4D4D4' },
+        { name: 'Light Blue', color: '#95B7DF', subText: '#95B7DF', subTextColor: '#38435A' },
+        { name: 'Gray', color: '#D4D4D4', subText: '#D4D4D4', subTextColor: '#38435A' }
+    ]
+
+    //  const colors = [
+    //     { name: 'Bright Orange', color: '#E68D00' },
+    //     { name: 'Light Blue', color: '#95B7DF' },
+    //     { name: 'Dark Gray', color: '#FF9D00' },
+    //     { name: 'DarkBlue', color: '#38435A' },
+    //     { name: 'White', color: '#D4D4D4' },
+    //     { name: 'Black', color: '#000000' }
+    // ]
+
     return (
         <div className={styles.container}>
             <div className={styles.contentContainer}>
@@ -45,7 +64,7 @@ const Note = () => {
                             <p className={styles.p}>
                                 Here are a few websites I found really helpful for brainstorming:
                             </p>
-                            <ul className={`${styles.p} ${styles.list}`}>
+                            <ul className={`${styles.p} ${styles.list} ${styles.link}`}>
                                 <li><a href="https://godly.website/" target="_blank">https://godly.website/</a></li>
                                 <li><a href="https://httpster.net/" target="_blank">https://httpster.net/</a></li>
                                 <li><a href="https://www.siteinspire.com/" target="_blank"></a>https://www.siteinspire.com/</li>
@@ -105,12 +124,45 @@ const Note = () => {
                                         </span>
                                     </div>
                                     <p className={styles.p}>
-                                        This was probably my biggest inspiration. I really liked the bento-box layout, the 
+                                        This was probably my biggest inspiration. I really liked the bento-box layout, the
                                         way content is organized, the unique design choices of every section, and the way he
                                         uses color to draw attention. A lot of concepts in my website were inspired by his approach.
                                     </p>
                                 </li>
                             </ul>
+                        </section>
+                        <section>
+                            <div className={styles.sectionSubHeader}><span>Colors</span></div>
+                            <p className={styles.p}>
+                                I wanted to try the dark theme and initially only used black and dark gray as my main colors.
+                                But, I decided to add dark blue and light blue as secondary colors, and later orange as a tertiary color.
+                                I recommend using a tool like <a className={styles.link} href="https://coolors.co/" target="_blank">Coolors</a> to 
+                                experiment with color combinations and <a className={styles.link} href="https://huemint.com/" target="_blank">Huemint </a>
+                                to visualize how they would look together.
+                                
+                            </p>
+                            <br />
+                            <div className={styles.gridWrapper}>
+                                <div className={styles.gridContainer}>
+                                    <div className={styles.grid}>
+                                        {colors.map((colorItem, index) => (
+                                            <div
+                                                key={index}
+                                                className={styles.colorSquare}
+                                                style={{
+                                                    backgroundColor: colorItem.color,
+                                                    border: colorItem.color === '#FFFFFF' ? '2px solid #E5E5E5' : 'none'
+                                                }}
+                                            >
+                                                <span style={{ color: colorItem.subTextColor }}>{colorItem.subText}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            
                         </section>
                     </section>
                 </div>
