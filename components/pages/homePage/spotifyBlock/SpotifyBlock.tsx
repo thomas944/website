@@ -1,71 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './SpotifyBlock.module.css'
 
 
-interface TrackData {
-    name: string;
-    artists: string[];
-    image: string;
-    url: string;
-}
-
-interface SongData {
-    success: boolean;
-    details?: string;
-    online: boolean;
-    track: TrackData;
-}
-
 const SpotifyBlock = () => {
-    const [online, setOnline] = useState(false)
-    const [song, setSong] = useState('')
-    const [artists, setArtists] = useState('')
-    const [img, setImg] = useState('')
-    const [url, setUrl] = useState('')
 
+    const online = false;
     const defaultName = 'love.';
     const defaultArtist = 'wave to earth';
     const defaultImg = 'https://i.scdn.co/image/ab67616d0000485124f8c3ad20b7c6cfecb5832e';
     const defaultUrl = 'https://open.spotify.com/track/5mtTAScDytxMMqZj14NmlN';
 
-    // useEffect(() => {
-    //     const fetchSong = async () => {
-    //         try {
-    //             const res = await fetch("process.env.SPOTIFY_API_URL")
-    //             const songData: SongData = await res.json();
-    //             setOnline(songData.online)
-    //             setSong(songData.track.name)
-    //             setArtists(songData.track.artists.join(', '))
-    //             setImg(songData.track.image)
-    //             setUrl(songData.track.url)
-    //         } catch (error) {
-    //             console.error('Failed to fetch song:', error)
-    //         }
-    //     };
-
-    //     fetchSong()
-    //     const interval = setInterval(fetchSong, 300 * 1000)
-
-    //     return () => clearInterval(interval);
-    // }, []);
 
 
     return (
         <div className={styles.container}>
             <div className={styles.largeContainerView}>
                 <div className={styles.imgContainer}>
-                    <img src={img || defaultImg} className={styles.img} />
+                    <img src={defaultImg} className={styles.img} />
                 </div>
                 <div className={styles.contentContainer}>
                     <span className={styles.statusTextLarge}>
                         {online ? 'Now Listening' : 'Offline'}</span>
                     <div className={styles.songContainer}>
                         <span className={styles.songName}
-                            onClick={() => window.open(url || defaultUrl, '_blank')}
+                            onClick={() => window.open(defaultUrl, '_blank')}
                         >
-                            {song || defaultName}
+                            {defaultName}
                         </span>
-                        <span className={styles.songArtists}>{artists || defaultArtist}</span>
+                        <span className={styles.songArtists}>{defaultArtist}</span>
                     </div>
 
                 </div>
@@ -86,11 +48,11 @@ const SpotifyBlock = () => {
                 </div>
                 <div className={styles.songTextSmall}>
                     <span className={styles.songNameSmall}
-                        onClick={() => window.open(url || defaultUrl, '_blank')}
+                        onClick={() => window.open(defaultUrl, '_blank')}
                     >
-                        {song || defaultName}
+                        {defaultName}
                     </span>
-                    <span>{artists || defaultArtist}</span>
+                    <span>{defaultArtist}</span>
                 </div>
             </div>
         </div>
