@@ -37,5 +37,18 @@
     padding: 2rem 0;
     color: #D4D4D4;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
+    width: 100%;
 }
+
+.sectionHeader {
+    padding: 0 0 1rem 0;
+    margin: 1rem 0;
+    border-bottom: 1px solid #727272;
+}
+
+.p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
