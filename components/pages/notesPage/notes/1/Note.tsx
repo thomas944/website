@@ -11,7 +11,7 @@ const Note = () => {
                         Hello, thanks for stopping by and welcome 😊.
                     </p>
                     <p>
-                        Things are still under development, but I wanted to create a place where I can share updates on my projects, topics I'm currently interested in, and life events.
+                        Things are still under development, but I wanted to create a place where I can share updates on my projects, topics I&apos;m currently interested in, and life events.
                     </p>
                     <br></br>
                     <p>

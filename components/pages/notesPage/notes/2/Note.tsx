@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './Note.module.css'
 import Image from 'next/image'
 import { MdOutlineArrowOutward } from 'react-icons/md'
-import { StyleRegistry } from 'styled-jsx'
 
 const Note = () => {
     const colors = [
@@ -34,8 +33,8 @@ const Note = () => {
                         <p className={styles.p}>
                             Despite my interest in programming, for the longest time I avoided web development.
                             My first attemps at learning HTML, CSS, and JS were <em>pre-ChatGPT</em>, where I would
-                            spend hours in 10-hour courses and still feel like I couldn't build anything original.
-                            The phrase "tutorial hell" pretty much sums it up.
+                            spend hours in 10-hour courses and still feel like I couldn&apos;t build anything original.
+                            The phrase &quot;tutorial hell&quot; pretty much sums it up.
                         </p>
                         <br />
                         <p className={styles.p}>
@@ -43,11 +42,11 @@ const Note = () => {
                             making sense in the summer of 2023 during my internship where most of my work was
                             on front end tasks. Thankfully, ChatGPT was also around that time, or I probably would have
                             struggled a lot. I gained a lot of confidence from that experience, and I realized
-                            web development wasn't so bad after all
+                            web development wasn&apos;t so bad after all
                         </p>
                         <br />
                         <p className={styles.p}>
-                            Since then, I've learned a ton and wanted to challenge myself by building a website
+                            Since then, I&apos;ve learned a ton and wanted to challenge myself by building a website
                             from scratch. I hope to share how that process went here.
                         </p>
                     </section>
@@ -80,7 +79,7 @@ const Note = () => {
                                             <Image src={'/images/notes/2/ref-1.png'} alt="ref-1" fill />
                                         </div>
                                         <span className={styles.imgSubtitle}>
-                                            <a href="https://p5aholic.me/projects/" target="_blank">Keita Yamada's portfolio</a>
+                                            <a href="https://p5aholic.me/projects/" target="_blank">Keita Yamada&apos;s portfolio</a>
                                             <MdOutlineArrowOutward />
                                         </span>
                                     </div>
@@ -102,7 +101,7 @@ const Note = () => {
                                             <Image src={'/images/notes/2/ref-2.png'} alt="ref-2" fill />
                                         </div>
                                         <span className={styles.imgSubtitle}>
-                                            <a href="https://www.nathom.dev/" target="_blank">Nathaniel Thomas' portfolio</a>
+                                            <a href="https://www.nathom.dev/" target="_blank">Nathaniel Thomas&apos;s portfolio</a>
                                             <MdOutlineArrowOutward />
                                         </span>
                                     </div>
@@ -119,7 +118,7 @@ const Note = () => {
                                             <Image src={'/images/notes/2/ref-4.png'} alt="ref-4" fill />
                                         </div>
                                         <span className={styles.imgSubtitle}>
-                                            <a href="https://mnsh.me/" target="_blank">Manish Basargekar's portfolio</a>
+                                            <a href="https://mnsh.me/" target="_blank">Manish Basargekar&apos;s portfolio</a>
                                             <MdOutlineArrowOutward />
                                         </span>
                                     </div>
@@ -177,7 +176,7 @@ const Note = () => {
                         </p>
                         <br />
                         <p className={styles.p}>
-                            I have recently started using Markdown (mainly through Obsidian), but for this site I'm currently
+                            I have recently started using Markdown (mainly through Obsidian), but for this site I&apos;m currently
                             writing the content directly in JSX for simplicity. I may switch to Markdown or MDX later
                             as the number of posts grows.
                         </p>
@@ -185,7 +184,7 @@ const Note = () => {
                     <section className={styles.section}>
                         <div className={styles.sectionHeader}><span>TODOS</span></div>
                         <p className={styles.p}>
-                            The site is still a work in progress, and there are a few features and improvements I'd like to add:
+                            The site is still a work in progress, and there are a few features and improvements I&apos;d like to add:
                         </p>
                         <ul className={`${styles.list} ${styles.p}`}>
                             <li> Add a light themed mode and allow toggling between light/dark themes.</li>

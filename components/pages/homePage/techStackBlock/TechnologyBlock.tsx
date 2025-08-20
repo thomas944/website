@@ -1,5 +1,4 @@
 import React from 'react'
-import { colors } from '@/utils/colors'
 import TechnologyIcon from './TechnologyIcon'
 import { IconData } from '@/app/Icons'
 import styles from './TechnologyBlock.module.css'

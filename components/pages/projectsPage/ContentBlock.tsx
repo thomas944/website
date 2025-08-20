@@ -1,5 +1,4 @@
 import React from 'react'
-import { colors } from '@/utils/colors'
 import styles from './ContentBlock.module.css'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { Project } from '@/types/project';
