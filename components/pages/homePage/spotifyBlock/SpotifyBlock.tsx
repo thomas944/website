@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SpotifyBlock.module.css'
-
+import Image from 'next/image';
 
 const SpotifyBlock = () => {
 
@@ -16,7 +16,7 @@ const SpotifyBlock = () => {
         <div className={styles.container}>
             <div className={styles.largeContainerView}>
                 <div className={styles.imgContainer}>
-                    <img src={defaultImg} className={styles.img} />
+                        <Image src={defaultImg} alt="Song Cover Image" height={65} width={65}/>
                 </div>
                 <div className={styles.contentContainer}>
                     <span className={styles.statusTextLarge}>
