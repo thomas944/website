@@ -100,13 +100,13 @@
     height: 1400px;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 900px) {
     .imgContainer {
         width: 100%;
         height: auto;
     }
 
-    .mgImg {
+    .mdImg {
         aspect-ratio: 800 / 600; 
     }
 
@@ -144,6 +144,7 @@
 
 .gridContainer {
     width: 90%;
+    max-width: 800px;
     padding: 2rem;
     background-color: #ffffffe5;
 
@@ -157,6 +158,23 @@
     width: 100%;
     max-width: 600px; 
     margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .gridContainer {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .grid {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .subText {
+        font-size: 12px;
+    }
 }
 
 .colorSquare {

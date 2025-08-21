@@ -33,7 +33,7 @@ const Menu = () => {
                     </button>
 
                     <div className={styles.title}>
-                        PLCH
+                        tpham
                     </div>
                     <div className={styles.linkGroup}>
                         {['/home', '/projects', '/notes'].map((path) => (

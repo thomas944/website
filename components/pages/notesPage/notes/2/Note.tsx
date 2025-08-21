@@ -13,14 +13,6 @@ const Note = () => {
         { name: 'Gray', color: '#D4D4D4', subText: '#D4D4D4', subTextColor: '#38435A' }
     ]
 
-    //  const colors = [
-    //     { name: 'Bright Orange', color: '#E68D00' },
-    //     { name: 'Light Blue', color: '#95B7DF' },
-    //     { name: 'Dark Gray', color: '#FF9D00' },
-    //     { name: 'DarkBlue', color: '#38435A' },
-    //     { name: 'White', color: '#D4D4D4' },
-    //     { name: 'Black', color: '#000000' }
-    // ]
 
     return (
         <div className={styles.container}>
@@ -153,7 +145,7 @@ const Note = () => {
                                                     border: colorItem.color === '#FFFFFF' ? '2px solid #E5E5E5' : 'none'
                                                 }}
                                             >
-                                                <span style={{ color: colorItem.subTextColor }}>{colorItem.subText}</span>
+                                                <span className={styles.subText} style={{ color: colorItem.subTextColor }}>{colorItem.subText}</span>
                                             </div>
                                         ))}
                                     </div>
