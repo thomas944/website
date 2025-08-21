@@ -24,7 +24,7 @@ const imagePaths = [
     '/images/7.jpg',
 ]
 
-const Block = () => {
+const CardStackBlock = () => {
     const [cards, setCards] = useState<Card[]>([]);
 
   useEffect(() => {
@@ -88,4 +88,4 @@ const Block = () => {
   );
 }
 
-export default Block
+export default CardStackBlock

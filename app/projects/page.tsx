@@ -6,23 +6,20 @@ import { colors } from '@/utils/colors'
 import '@/styles/fonts.css'
 import ContentBlock from '@/components/pages/projectsPage/ContentBlock'
 import { projectData } from '@/data/projects'
+import styles from './page.module.css'
 
 const page = () => {
 
     return (
-        <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: colors.black }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-
+            <div className={styles.container}>
                 <LgNav />
-
-                <div style={{ width: '100%', padding: '0 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.5rem' }}>
+                <div className={styles.contentContainer}>
                     {projectData.map((entry, index) => (
                         <ContentBlock key={index} year={entry.year} projects={entry.projects} />
                     ))}
 
                 </div>
             </div>
-        </div>
     )
 }
 

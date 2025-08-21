@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    padding: 0 16px;
+    padding: 25px 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -175,4 +175,10 @@
 .colorSquare:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1015px) {
+    .container {
+        padding: 10px 16px;
+    }
 }

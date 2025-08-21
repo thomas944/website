@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    padding: 0 16px;
+    padding: 25px 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,4 +38,10 @@
     color: #D4D4D4;
     font-weight: 300;
     font-size: 20px;
+}
+
+@media screen and (max-width: 1015px) {
+    .container {
+        padding: 10px 16px;
+    }
 }

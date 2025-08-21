@@ -18,7 +18,7 @@
     border-radius: 1rem;
     font-size: 2.5rem;
     font-weight: 400;
-    margin: 3.5rem 0 2rem 0;
+    margin: 3rem 0 0 0;
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -98,7 +98,7 @@
 
 }
 
-@media screen and (min-width: 1030px) {
+@media screen and (min-width: 1015px) {
   .title {
     color: #95B7DF;
   }
@@ -107,12 +107,12 @@
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1015px) {
   .linkGroup {
     display: none;
   }
   .navContainer {
-    margin: 1.5rem 0 .75rem 0;
+    margin: 1.5rem 0 0.5rem 0;
     border-radius: 1.25rem;
   }
   .title {

@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.contentContainer {
+    width: 100%;
+    padding: 25px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+@media screen and (max-width: 1015px) {
+    .contentContainer {
+        padding: 10px 16px;
+    }
+}
